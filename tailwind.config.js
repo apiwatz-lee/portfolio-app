@@ -7,6 +7,9 @@ export default {
     extend: {
       fontFamily:{
         poppins: ['Poppins', 'sans-serif']
+      },
+      backgroundImage: {
+        'me': "url('./assets/me.jpg')"
       }
     },
     plugins: [],
