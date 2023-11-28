@@ -1,27 +1,26 @@
 import React from 'react'
 import { FaBars,FaTimes } from "react-icons/fa";
 import { useState } from 'react';
-import Me from "../assets/me.jpg"
 
 const Navbar = () => {
-    const links = [{name:"ABOUT ME",path:"/"},{name:"RESUME",path:"/"},{name:"PROJECTS",path:"/"},{name:"CONTACT",path:"/"}]
+    const links = [{name:"ABOUT ME",path:"/"},{name:"RESUME",path:"/resume"},{name:"PROJECTS",path:"/projects"},{name:"CONTACT",path:"/contact"}]
     const profile = {name:"Apiwat Lee",role:"Software Engineer"}
+
+    const [isOpen,setIsOpen] = useState(false)
 
     const mobileMenu = links.map((link,index)=>{
         return ( 
-        <li key={index} className='pl-12 py-2 text-[15px] rounded-md hover:text-white hover:bg-[#3E3F42]'>
-            <a href={link.path} className='p-2'>{link.name}</a>
-        </li>)
+            <li key={index} className='flex justify-center rounded-md hover:bg-[#3E3F42] hover:text-white'>
+                <a href={link.path} className='text-sm p-2 sm:p-4'>{link.name}</a>
+            </li>)
     })
 
     const desktopMenu = links.map((link,index)=>{
         return ( 
-        <li key={index} className='flex justify-center rounded-md hover:bg-[#3E3F42] hover:text-white'>
-            <a href={link.path} className='p-2'>{link.name}</a>
-        </li>)
+            <li key={index} className='flex justify-center rounded-md hover:bg-[#3E3F42] hover:text-white'>
+                <a href={link.path} className='p-2'>{link.name}</a>
+            </li>)
     })
-
-    const [isOpen,setIsOpen] = useState(false)
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -29,34 +28,36 @@ const Navbar = () => {
 
     return (
 
-    <nav className='p-14 relative flex justify-between items-center h-36'>
+    <>
+        <nav className='p-14 relative flex justify-between items-center h-36'>
 
-        <a href='/' className='flex flex-col justify-start items-center gap-2'>
-            <h1 className='text-3xl font-bold'>{profile.name}</h1>
-            <p className='text-sm text-slate-500 lg:text-slate-900'>{profile.role}</p>
-        </a>
+            <a href='/' className='flex flex-col justify-start items-center gap-2'>
+                <h1 className='text-3xl font-bold'>{profile.name}</h1>
+                <p className='text-sm text-slate-500'>{profile.role}</p>
+            </a>
 
-        <ul className='hidden lg:flex mt-5 items-center justify-between w-[400px] '>
-            {desktopMenu}
-        </ul>
-
-        {/* hamburger */}
-        <div className='absolute right-10'>
-            <button onClick={toggleMenu}> 
-                {isOpen ? <FaTimes className='text-2xl lg:hidden hover:text-slate-600'/> : <FaBars className='text-2xl lg:hidden hover:text-slate-600'/>}
-            </button>
-        </div>
-
-       
-        {isOpen && 
-        <div className='fixed right-10 top-24 text-center lg:hidden'>
-            <ul>
-                {mobileMenu}
+            <ul className='hidden lg:flex mt-5 items-center justify-between w-[400px] '>
+                {desktopMenu}
             </ul>
-        </div>}
-        
 
-    </nav>
+            {/* hamburger */}
+            <section className='absolute lg:hidden' onClick={toggleMenu}>
+            
+                <div className={`fixed h-screen duration-500 ${isOpen ? 'right-0 top-0':'right-[-100%] top-0'} w-48`}>
+
+                    {isOpen ? <FaTimes className='text-2xl hover:text-slate-600 fixed right-10 top-16'/> 
+                            : <FaBars className='text-2xl fixed right-10 top-16 hover:text-slate-600'/>}
+                    
+                    <ul className='pt-28'>
+                        {mobileMenu}
+                    </ul>
+
+                </div>
+
+            </section>
+
+        </nav>
+    </>
 
   )
 }

@@ -1,13 +1,22 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
 import './App.css'
-import Hero from './components/Hero'
+import HomePage from './pages/HomePage'
+import Resume from './pages/Resume'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <Hero/>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/resume' element={<Resume/>}/>
+            <Route path='/projects' element={<Projects/>}/>
+            <Route path='/contact' element={<Contact/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
