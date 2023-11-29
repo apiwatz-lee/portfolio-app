@@ -9,7 +9,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif']
       },
       backgroundImage: {
-        'me': "url('./assets/me.jpg')"
+        'mountain': "url('./assets/mountain.avif')"
       }
     },
     plugins: [],
