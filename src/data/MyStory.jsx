@@ -9,20 +9,20 @@ import bootcamp from "../assets/story/bootcamp.jpg"
 export const story = [
     {
         id:1,
-        title:'child',
+        title:'When I was Child',
         description:`I'm just a guy from the heartwarming town of Hat Yai, where the Thai and Chinese vibes blend seamlessly.
         Growing up in the cozy cocoon of my family, we were all about running a business.`,
         img:child,
     },
     {
         id:2,
-        title:'graduated',
+        title:'Where I Graduated',
         description:`So, naturally, I decided to dive into the world of Business Administration, rocking the BBA major at Prince of Songkhla University.`,
         img:graduated,
     },
     {
         id:3,
-        title:'my first job',
+        title:'My First Job',
         description:`Post-grad life led me to a four-year stint in the procurement department. 
         Now, I won't lie, I was cruising along, but the whole "What am I really into?" question was on a loop in my head. 
         It felt like I was standing at the edge of a grand adventure, waiting for the universe to hand me the treasure map.`,
@@ -30,7 +30,7 @@ export const story = [
     },
     {
         id:4,
-        title:'my mentor',
+        title:'Turning Point',
         description:`And then, bam! Cue a buddy from work who happened to be a coding wizard. 
         He opened up the Pandora's box of software development for me. 
         It wasn't just a career shift; it was like finding the missing piece of the puzzle that is me.`,
@@ -38,23 +38,22 @@ export const story = [
     },
     {
         id:5,
-        title:'learning process',
+        title:'Learning Process',
       description:`Fast forward, and I'm knee-deep in the joy of learning, tweaking, and creating. 
       It's like painting on a canvas, but instead of colors, it's lines of code bringing my ideas to life.`,
       img:learning,
   },
     {
         id:6,
-        title:'my first resignation',
-        description:`Big decision time. 
-        I decided to ditch the 9-to-5 routine and dive headfirst into a Coding Bootcamp. 
-        Why? Well, it just felt right, you know? Like grabbing life by the horns and saying, "Let's do this!"`,
+        title:'My First Resignation',
+        description:`6 Jun 2023 - Big decision time. This was my last day of my first job`,
         img:firstResign,
     },
     {
         id:7,
-        title:'joined coding bootcamp',
-        description:`The future's a bit of a mystery, but right now, I'm loving what I'm doing. 
+        title:'Joined Coding Bootcamp',
+        description:`I decided to ditch the 9-to-5 routine and dive headfirst into a Coding Bootcamp. 
+        Why? Well, it just felt right, you know? Like grabbing life by the horns and saying, "Let's do this!" The future's a bit of a mystery, but right now, I'm loving what I'm doing. 
         This story? It's my journey—full of twists, turns, and a whole lot of figuring things out.`,
         img:bootcamp,
     },

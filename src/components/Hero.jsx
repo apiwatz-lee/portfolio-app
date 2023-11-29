@@ -39,9 +39,8 @@ const Hero = () => {
  
   return (
 
-    <div className='flex flex-col h-[70%] justify-start items-center'>
-
-        <div className='text-[20px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
+    <div className='flex flex-col h-[70%] justify-start items-center gap-10'>
+        <div className='text-[15px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
           <span className='text-[20px] lg:text-3xl'>"</span>
             <TypeAnimation
                 sequence={[
@@ -63,8 +62,6 @@ const Hero = () => {
         <div className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[350px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
             {skillLogo}
         </div>
-        
-     
     </div>
 
   )
