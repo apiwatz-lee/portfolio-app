@@ -9,10 +9,10 @@ const HomePage = () => {
   const page = 'HomePage'
 
   return (
-    <>
-        <Hero/>
+    <div className='bg-mountain bg-cover bg-bottom h-screen '>
         <Navbar page={page}/>
-    </>
+        <Hero/>
+    </div>
   )
 }
 
