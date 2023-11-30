@@ -1,11 +1,12 @@
 import React from 'react'
-import { story } from '../data/myStory'
+import { story } from '../data/MyStory'
 import me2 from "../assets/me/me2.jpg"
 import { motion } from 'framer-motion'
 
 
 const Blog = () => {
 
+  console.log(story)
   const leftAnimate = {
     offscreen:{opacity:0,translateX:-100},
     onscreen:{opacity:1,translateX:0},
