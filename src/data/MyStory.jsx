@@ -6,7 +6,7 @@ import learning from "../assets/story/learning.jpg"
 import firstResign from "../assets/story/experience.jpg"
 import bootcamp from "../assets/story/bootcamp.jpg"
 import primary from "../assets/story/primarySchool.jpg"
-import achievement from "../assets/story/achievement.png"
+import achievement from "../assets/story/achievement.jpg"
 
 
 export const story = [

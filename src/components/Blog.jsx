@@ -1,7 +1,7 @@
 import React from 'react'
 import { story } from '../data/myStory'
-import me2 from "../assets/me2.jpg"
-import { motion ,useScroll} from 'framer-motion'
+import me2 from "../assets/me/me2.jpg"
+import { motion } from 'framer-motion'
 
 
 const Blog = () => {
@@ -93,14 +93,15 @@ const Blog = () => {
     <>
         <main className='font-montserrat flex flex-col justify-center items-center gap-10 my-5'>
           <h1 className='text-center font-bold text-4xl my-5'>About Me</h1>
-          <div className='flex flex-col gap-10 lg:flex-row justify-center items-center'>
+
+          <section className='flex flex-col gap-10 lg:flex-row justify-center items-center'>
             <img src={me2} alt="me" className='rounded-full w-72' />
 
             <div className='w-96 lg:w-[700px] text-md flex flex-col justify-center items-center lg:items-start gap-3 lg:gap-7'>
               <h2 className='w-72 text-3xl text-center font-semibold lg:w-[600px] lg:text-start lg:text-3xl text-gray-700'> Hey There ! Welcome to my Stories</h2>
               {myIntroduction}
             </div>
-          </div>
+          </section>
 
           {myAnimationStory}
         
