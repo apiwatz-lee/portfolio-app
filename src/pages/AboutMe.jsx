@@ -7,10 +7,10 @@ const AboutMe = () => {
   const page = 'AboutMe'
 
   return (
-    <div className='overflow-x-hidden'>
+    <>
         <Navbar page={page}/>
         <Blog/>
-    </div>
+    </>
   )
 }
 
