@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const Blog = () => {
 
-  console.log(story)
+
   const leftAnimate = {
     offscreen:{opacity:0,translateX:-100},
     onscreen:{opacity:1,translateX:0},
