@@ -1,16 +1,17 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import { story } from '../data/myStory'
+import me2 from "../assets/me2.jpg"
+import Blog from '../components/Blog'
 
 const AboutMe = () => {
 
-const page = 'AboutMe'
+  const page = 'AboutMe'
 
   return (
     <>
         <Navbar page={page}/>
-        <section className='font-montserrat'>
-                <h1 className='text-center font-bold text-4xl mt-5'>About Me</h1>
-        </section>
+        <Blog/>
     </>
   )
 }
