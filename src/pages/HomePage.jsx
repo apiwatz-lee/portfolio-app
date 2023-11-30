@@ -8,7 +8,7 @@ const HomePage = () => {
   const page = 'HomePage'
 
   return (
-    <div className='bg-mountain bg-cover bg-bottom h-screen '>
+    <div className='bg-mountain bg-cover bg-bottom h-screen overflow-y-hidden'>
         <Navbar page={page}/>
         <Hero/>
     </div>
