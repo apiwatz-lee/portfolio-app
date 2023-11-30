@@ -21,16 +21,16 @@ const Hero = () => {
                 }
 
   const logo = [
-    {id:1,name:"html",img:html},
-    {id:2,name:"css",img:css},
-    {id:3,name:"js",img:js},
-    {id:4,name:"react",img:react},
-    {id:5,name:"typescript",img:typescript},
-    {id:6,name:"tailwind",img:tailwind},
-    {id:7,name:"node",img:node},
-    {id:8,name:"express",img:express},
-    {id:9,name:"postgreSQL",img:postgreSQL},
-    {id:10,name:"mongoDB",img:monogodb},
+    {id:1,name:'html',img:html},
+    {id:2,name:'css',img:css},
+    {id:3,name:'js',img:js},
+    {id:4,name:'react',img:react},
+    {id:5,name:'typescript',img:typescript},
+    {id:6,name:'tailwind',img:tailwind},
+    {id:7,name:'node',img:node},
+    {id:8,name:'express',img:express},
+    {id:9,name:'postgreSQL',img:postgreSQL},
+    {id:10,name:'mongoDB',img:monogodb},
   ]
 
   const skillLogo = logo.map((item)=>{
@@ -39,8 +39,8 @@ const Hero = () => {
  
   return (
 
-    <div className='flex flex-col h-[70%] justify-start items-center gap-10'>
-        <div className='text-[15px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
+    <main className='flex flex-col h-[70%] justify-center items-center gap-10'>
+        <section className='text-[15px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
           <span className='text-[20px] lg:text-3xl'>"</span>
             <TypeAnimation
                 sequence={[
@@ -57,12 +57,12 @@ const Hero = () => {
                 repeat={Infinity}
               />
           <span className='text-[20px] lg:text-3xl'>"</span> 
-        </div>
+        </section>
 
-        <div className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[350px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
+        <section className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[350px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
             {skillLogo}
-        </div>
-    </div>
+        </section>
+    </main>
 
   )
 }
