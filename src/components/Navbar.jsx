@@ -18,7 +18,7 @@ const Navbar = ({page}) => {
 
     const mobileMenu = links.map((link,index)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT'?`border border-gray-300`:null}`}>
+            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT'?` w-28 border border-[#A8A8A1]`:null}`}>
                 <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>
             </li>)
     })
@@ -30,14 +30,14 @@ const Navbar = ({page}) => {
     return (
 
     <>
-        <aside className={`lg:hidden fixed bg-[#FEFCFF] duration-300  ${isOpen ? 'right-0':'right-[-100%]'} h-full w-[150px] flex flex-col justify-center items-center gap-10`}>
+        <aside className={`lg:hidden fixed bg-[#FEFCFF] duration-300  ${isOpen ? 'right-0':'right-[-100%]'} h-full w-[150px] flex flex-col justify-center items-center gap-10 z-40`}>
             <div className='w-full absolute top-20 flex justify-end px-8'>
                 {/* <FaTimes className='text-2xl hover:text-white duration-300' onClick={toggleMenu}/> */}
             </div>
             {mobileMenu}
         </aside>
         
-        <nav className={`sticky top-0 p-14 h-1 flex justify-between items-center font-montserrat ${page !== "HomePage" ? `bg-mountain bg-top bg-cover shadow-md`:null}`}>
+        <nav className={`sticky top-0 p-14 h-1 flex justify-between items-center font-montserrat z-50 ${page !== "HomePage" ? `bg-mountain bg-top bg-cover shadow-md`:null}`}>
             <a href='/' className='flex flex-col justify-start items-center gap-2'>
                 <h1 className='text-3xl font-bold'>{profile.name}</h1>
                 <p className='text-sm text-slate-500'>{profile.role}</p>
