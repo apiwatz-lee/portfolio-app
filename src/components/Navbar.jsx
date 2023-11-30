@@ -32,7 +32,7 @@ const Navbar = ({page}) => {
     <>
         <aside className={`lg:hidden fixed bg-[#FEFCFF] duration-300  ${isOpen ? 'right-0':'right-[-100%]'} h-full w-[150px] flex flex-col justify-center items-center gap-10`}>
             <div className='w-full absolute top-20 flex justify-end px-8'>
-                <FaTimes className='text-2xl hover:text-white duration-300' onClick={toggleMenu}/>
+                {/* <FaTimes className='text-2xl hover:text-white duration-300' onClick={toggleMenu}/> */}
             </div>
             {mobileMenu}
         </aside>
