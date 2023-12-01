@@ -16,14 +16,14 @@ export const motto = {
   }
 
 export const logo = [
-{id:1,name:'html',img:html},
-{id:2,name:'css',img:css},
-{id:3,name:'js',img:js},
-{id:4,name:'react',img:react},
-{id:5,name:'typescript',img:typescript},
-{id:6,name:'tailwind',img:tailwind},
-{id:7,name:'node',img:node},
-{id:8,name:'express',img:express},
-{id:9,name:'postgreSQL',img:postgreSQL},
-{id:10,name:'mongoDB',img:monogodb},
+{id:1,name:'html',img:html,url:'https://developer.mozilla.org/en-US/docs/Web/HTML'},
+{id:2,name:'css',img:css,url:'https://developer.mozilla.org/en-US/docs/Web/CSS'},
+{id:3,name:'js',img:js,url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript'},
+{id:4,name:'react',img:react,url:'https://react.dev/'},
+{id:5,name:'typescript',img:typescript,url:'https://react.dev/learn/typescript'},
+{id:6,name:'tailwind',img:tailwind,url:'https://tailwindcss.com/'},
+{id:7,name:'node',img:node,url:'https://nodejs.org/en/docs'},
+{id:8,name:'express',img:express,url:'https://expressjs.com/'},
+{id:9,name:'postgreSQL',img:postgreSQL,url:'https://www.postgresql.org/'},
+{id:10,name:'mongoDB',img:monogodb,url:'https://www.mongodb.com/'},
 ]

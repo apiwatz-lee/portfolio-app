@@ -1,8 +1,8 @@
 import React from 'react'
 import { story } from '../data/MyStory'
-import me2 from "../assets/me/me2.jpg"
 import { motion } from 'framer-motion'
 import { statement } from "../data/Statement"
+import AboutMeCard from './AboutMeCard'
 
 
 const Blog = () => {
@@ -18,45 +18,6 @@ const Blog = () => {
     onscreen:{opacity:1,translateX:0},
   }
   
-  //   const statement = {
-  //     page:'About Me',
-  //     greeting:'Hey There ! Welcome to my Stories',
-  //     introduction:[
-  //       {id:1,description:"I'm Apiwat Leelasawatsuk"},
-  //       {id:2,description:"Interested in Front-end Development utilizing React.js."},
-  //       {id:3,description:"Based in Bangkok,Thailand"}],
-  //     thanks:`Thank you for taking the time to read my story up to this point. 
-  //     If you enjoyed my journey and would like to be a part of it, please consider taking a look at my resume. 
-  //     Your consideration means a lot to me.`
-  // }
-  
-
-  const myIntroduction = statement.introduction.map((item)=>{
-    return (<p className='text-center text-[14px] lg:text-2xl lg:text-start text-gray-500' key={item.id}>{item.description}</p>)
-  })
-  
-  // const myStory = story.map((item)=>{
-  
-  //   return (
-  //     item.id % 2 === 0 ?
-  //             <section className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' key={item.id}>
-  //               <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
-  //               <div className='flex flex-col-reverse gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
-  //                 <p className='w-[300px] p-5 text-center text-gray-600 lg:text-xl lg:w-[600px] lg:p-10'>{item.description}</p>
-  //                 <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
-  //               </div>
-  //             </section>
-  //     :       
-  //             <section className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' key={item.id}>
-  //                 <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
-  //                 <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
-  //                   <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
-  //                   <p className='w-[300px] p-5 text-center text-gray-600 lg:text-xl lg:w-[600px] lg:p-10'>{item.description}</p>
-  //                 </div>
-  //             </section>
-  //   )
-  
-  // })
       
   const myAnimationStory = story.map((item)=>{
     return (
@@ -99,14 +60,8 @@ const Blog = () => {
         <main className='font-montserrat flex flex-col justify-center items-center gap-10 my-5'>
           <h1 className='text-center font-bold text-4xl my-5'>{statement.page}</h1>
 
-          <section className='flex flex-col gap-10 lg:flex-row justify-center items-center'>
-            <img src={me2} alt="me" className='rounded-full w-72' />
-
-            <div className='w-96 lg:w-[700px] text-md flex flex-col justify-center items-center lg:items-start gap-3 lg:gap-7'>
-              <h2 className='w-72 text-3xl text-center font-semibold lg:w-[600px] lg:text-start lg:text-3xl text-gray-700'> {statement.greeting}</h2>
-              {myIntroduction}
-            </div>
-          </section>
+        
+          <AboutMeCard/>
 
           {myAnimationStory}
         
