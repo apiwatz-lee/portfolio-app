@@ -1,38 +1,12 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
-import html from "../assets/logo/html.png"
-import css from "../assets/logo/css.png"
-import js from "../assets/logo/js.png"
-import react from "../assets/logo/react.png"
-import typescript from "../assets/logo/typescript.png"
-import tailwind from "../assets/logo/tailwind.png"
-import node from "../assets/logo/nodejs.png"
-import express from "../assets/logo/express.svg"
-import postgreSQL from "../assets/logo/postgresql.png"
-import monogodb from "../assets/logo/mongodb.svg"
+import {motto} from "../data/HomePage"
+import {logo} from "../data/HomePage"
+import Skills from './Skills';
 
 
 const Hero = () => {
   
-  const motto = {
-                  first:'A man who never stops Learning',
-                  second:'A man who never stops Praticing',
-                  third:'A man who never stops Focusing',
-                }
-
-  const logo = [
-    {id:1,name:'html',img:html},
-    {id:2,name:'css',img:css},
-    {id:3,name:'js',img:js},
-    {id:4,name:'react',img:react},
-    {id:5,name:'typescript',img:typescript},
-    {id:6,name:'tailwind',img:tailwind},
-    {id:7,name:'node',img:node},
-    {id:8,name:'express',img:express},
-    {id:9,name:'postgreSQL',img:postgreSQL},
-    {id:10,name:'mongoDB',img:monogodb},
-  ]
-
   const skillLogo = logo.map((item)=>{
     return (<img key={item.id} src={item.img} alt={item.name} className='w-10'/>)
   })
@@ -59,9 +33,10 @@ const Hero = () => {
           <span className='text-[20px] lg:text-3xl'>"</span> 
         </section>
 
-        <section className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[350px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
+        {/* <section className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[350px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
             {skillLogo}
-        </section>
+        </section> */}
+        <Skills/>
     </main>
 
   )
