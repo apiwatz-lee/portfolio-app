@@ -12,7 +12,7 @@ import achievement from "../assets/story/achievement.jpg"
 export const story = [
     {
         id:1,
-        title:'When I was Child',
+        title:'When I was a Child',
         description:`I am Thai with Chinese heritage, born and raised in a warm family in Hat Yai, Thailand. 
         My father has a great passion for computers, so I've had the opportunity to play with computers since I was a child. 
         Our house even has a dedicated computer room.

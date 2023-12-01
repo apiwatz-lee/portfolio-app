@@ -2,10 +2,10 @@ import React from 'react'
 import { FaBars,FaTimes } from "react-icons/fa";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { links } from "../data/NavBar";
+import { profile } from "../data/NavBar"
 
 const Navbar = ({page}) => {
-    const links = [{name:'HOME',path:'/'},{name:'ABOUT ME',path:'/aboutme'},{name:'PROJECTS',path:'/projects'},{name:'RESUME',path:'/resume'},{name:'CONTACT',path:'/contact'}]
-    const profile = {name:'Apiwat Lee',role:'Software Engineer'}
 
     const [isOpen,setIsOpen] = useState(false)
 
@@ -18,7 +18,7 @@ const Navbar = ({page}) => {
 
     const mobileMenu = links.map((link,index)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT'?` w-32 border border-[#A8A8A1]`:null}`}>
+            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT'?` w-28 border border-[#A8A8A1]`:null}`}>
                 <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>
             </li>)
     })
