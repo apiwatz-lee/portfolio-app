@@ -3,14 +3,11 @@ import { TypeAnimation } from 'react-type-animation';
 import {motto} from "../data/HomePage"
 import {logo} from "../data/HomePage"
 import Skills from './Skills';
+import AboutMeCard from './AboutMeCard';
 
 
 const Hero = () => {
   
-  const skillLogo = logo.map((item)=>{
-    return (<img key={item.id} src={item.img} alt={item.name} className='w-10'/>)
-  })
- 
   return (
 
     <main className='flex flex-col h-[70%] justify-center items-center gap-10'>
@@ -32,10 +29,7 @@ const Hero = () => {
               />
           <span className='text-[20px] lg:text-3xl'>"</span> 
         </section>
-
-        {/* <section className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[350px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
-            {skillLogo}
-        </section> */}
+       
         <Skills/>
     </main>
 

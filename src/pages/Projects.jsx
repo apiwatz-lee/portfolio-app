@@ -16,10 +16,10 @@ const Projects = () => {
         <section className='border flex flex-col-reverse w-96 h-auto rounded-lg shadow-lg p-10 gap-10 lg:flex-row lg:w-[1200px] mx-20' >  
           <div className='flex flex-col gap-5 justify-center items-center lg:justify-evenly lg:text-center'>
             <h1 className='font-bold text-lg lg:text-2xl'>{item.name}</h1>
-            <p className='text-center'>{item.description}</p>
+            <p className='text-center text-gray-500'>{item.description}</p>
             <div className='flex h-20 w-92 flex-wrap items-center justify-center gap-2 lg:gap-5'>
               {item.stack.map((item,index)=>{
-                return  <p className='h-8 p-2 flex items-center rounded-full bg-gray-300' key={index}>{item}</p>
+                return  <p className='h-8 p-3 text-sm lg:text-base flex items-center rounded-full bg-gray-300' key={index}>{item}</p>
               })}
             </div>
           </div>
@@ -38,10 +38,10 @@ const Projects = () => {
 
         <div className='flex flex-col gap-5 justify-center items-center lg:justify-evenly lg:text-center'>
           <h1 className='font-bold text-lg lg:text-2xl'>{item.name}</h1>
-          <p className='text-center'>{item.description}</p>
+          <p className='text-center text-gray-500'>{item.description}</p>
           <div className='flex h-20 w-92 flex-wrap items-center justify-center gap-2 lg:gap-5'>
             {item.stack.map((item,index)=>{
-              return  <p className='h-8 p-2 flex items-center rounded-full bg-gray-300' key={index}>{item}</p>
+              return  <p className='h-8 p-3 text-sm lg:text-base flex items-center rounded-full bg-gray-300' key={index}>{item}</p>
             })}
           </div>
         </div>
