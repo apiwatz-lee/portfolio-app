@@ -6,8 +6,6 @@ import Skills from '../components/Skills'
 
 const Projects = () => {
 
-  const page = 'Projects'
-
   const projectCard = projects.map((item)=>{
     return (
       item.id % 2 === 0 ?
@@ -54,8 +52,8 @@ const Projects = () => {
   
   return (
     <>
-        <Navbar page={page}/>
-        <main className='font-montserrat border flex flex-col justify-center items-center gap-10'>
+        <Navbar page='Projects'/>
+        <main className='font-montserrat flex flex-col justify-center items-center gap-10'>
                 <h1 className='text-center font-bold text-4xl mt-5'>Projects</h1>
                 <Skills/>
                 {projectCard}
