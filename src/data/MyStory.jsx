@@ -22,7 +22,7 @@ export const story = [
     },
     {
         id:2,
-        title:'Primary and Secondary school',
+        title:'Primary and Secondary School',
         description:`At that time, they used to send me to computer competitions, 
         and I even won second place. Unfortunately, 
         we didn't have a mobile phone with a camera back then, 
