@@ -18,7 +18,7 @@ const Navbar = ({page}) => {
 
     const mobileMenu = links.map((link,index)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT'?` w-28 border border-[#A8A8A1]`:null}`}>
+            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT'?` w-[100px] border border-[#A8A8A1]`:null}`}>
                 <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>
             </li>)
     })
@@ -37,7 +37,7 @@ const Navbar = ({page}) => {
             {mobileMenu}
         </aside>
         
-        <nav className={`sticky top-0 p-14 h-1 flex justify-between items-center font-montserrat ${page !== "HomePage" ? `bg-mountain bg-top bg-cover shadow-md`:null}`}>
+        <nav className={`sticky top-0 p-14 h-1 flex justify-between items-center font-montserrat bg-mountain bg-top bg-cover outline-none ${page !== 'HomePage' ? `shadow-md `:null}`}>
             <a href='/' className='flex flex-col justify-start items-center gap-2'>
                 <h1 className='text-3xl font-bold'>{profile.name}</h1>
                 <p className='text-sm text-slate-500'>{profile.role}</p>
@@ -51,6 +51,8 @@ const Navbar = ({page}) => {
                     {isOpen ? <FaTimes onClick={toggleMenu} className='text-2xl hover:text-slate-500'/> : <FaBars onClick={toggleMenu} className='text-2xl hover:text-slate-500'/>}
             </div>
         </nav> 
+
+        
     </>
 
   )

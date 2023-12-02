@@ -2,7 +2,6 @@ import React from 'react'
 import { story } from '../data/MyStory'
 import { motion } from 'framer-motion'
 import { statement } from "../data/Statement"
-import AboutMeCard from './AboutMeCard'
 
 
 const Blog = () => {
@@ -21,6 +20,16 @@ const Blog = () => {
       
   const myAnimationStory = story.map((item)=>{
     return (
+      item.id === 1 ?
+    
+      <section className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' key={item.id}>
+        <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
+        <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
+          <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
+          <p className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</p>
+        </div>
+      </section>
+      :
       item.id % 2 === 0 ?
               <motion.section 
               initial={'offscreen'}
@@ -32,11 +41,11 @@ const Blog = () => {
               key={item.id}>
                 <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
                 <div className='flex flex-col-reverse gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
-                  <p className='w-[300px] p-5 text-center text-gray-600 lg:text-xl lg:w-[600px] lg:p-10'>{item.description}</p>
+                  <p className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</p>
                   <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
                 </div>
               </motion.section>
-      :       
+      :
               <motion.div 
               initial={'offscreen'}
               whileInView={'onscreen'}
@@ -48,9 +57,10 @@ const Blog = () => {
                   <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
                   <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
                     <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
-                    <p className='w-[300px] p-5 text-center text-gray-600 lg:text-xl lg:w-[600px] lg:p-10'>{item.description}</p>
+                    <p className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</p>
                   </div>
               </motion.div>
+     
     )
   
   })
@@ -58,10 +68,7 @@ const Blog = () => {
   return (
     <>
         <main className='font-montserrat flex flex-col justify-center items-center gap-10 my-5'>
-          <h1 className='text-center font-bold text-4xl my-5'>{statement.page}</h1>
-
-        
-          <AboutMeCard/>
+          <h1 className='text-center font-bold text-4xl my-5'>My Stories</h1>
 
           {myAnimationStory}
         
