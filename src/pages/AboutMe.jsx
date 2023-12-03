@@ -4,11 +4,9 @@ import Blog from '../components/Blog'
 
 const AboutMe = () => {
 
-  const page = 'AboutMe'
-
   return (
     <>
-        <Navbar page={page}/>
+        <Navbar page='AboutMe'/>
         <Blog/>
     </>
   )

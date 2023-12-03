@@ -6,11 +6,9 @@ import AboutMeCard from '../components/AboutMeCard'
 
 const HomePage = () => {
 
-  const page = 'HomePage'
-
   return (
     <div className='h-screen'>
-        <Navbar page={page}/>
+        <Navbar page='HomePage'/>
         <Hero/>
         <AboutMeCard/>
     </div>

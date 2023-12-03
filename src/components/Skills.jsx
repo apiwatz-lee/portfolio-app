@@ -6,8 +6,8 @@ const Skills = () => {
 
     const skillLogo = logo.map((item)=>{
         return (
-        <Link to={item.url} target='_blank'>
-          <img key={item.id} src={item.img} alt={item.name} className='w-10'/>
+        <Link to={item.url} target='_blank' key={item.id}>
+          <img src={item.img} alt={item.name} className='w-10'/>
         </Link>)
     })
 
