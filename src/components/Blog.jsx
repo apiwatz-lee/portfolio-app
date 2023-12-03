@@ -6,16 +6,11 @@ import { statement } from "../data/Statement"
 
 const Blog = () => {
 
-  const leftAnimate = {
-    offscreen:{opacity:0,translateX:-100},
-    onscreen:{opacity:1,translateX:0},
-  }
-  
-  const rightAnimate = {
-    offscreen:{opacity:0,translateX:100},
-    onscreen:{opacity:1,translateX:0},
-  }
-  
+  const topAnimate = {
+    offscreen:{opacity:0,translateY:100},
+    onscreen:{opacity:1,translateY:0},
+  } 
+
       
   const myAnimationStory = story.map((item)=>{
     return (
@@ -33,9 +28,9 @@ const Blog = () => {
               <motion.section 
               initial={'offscreen'}
               whileInView={'onscreen'}
-              transition={{duration:1}}
+              transition={{duration:0.5}}
               viewport={{once:true,amount:0.5}}
-              variants={leftAnimate}
+              variants={topAnimate}
               className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' 
               key={item.id}>
                 <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
@@ -50,7 +45,7 @@ const Blog = () => {
               whileInView={'onscreen'}
               transition={{duration:1}}
               viewport={{once:true,amount:0.5}}
-              variants={rightAnimate}
+              variants={topAnimate}
               className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' 
               key={item.id}>
                   <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
@@ -76,7 +71,7 @@ const Blog = () => {
             whileInView={'onscreen'}
             viewport={{once:true,amount:0.5}}
             transition={{duration:1}}
-            variants={leftAnimate}
+            variants={topAnimate}
             className='text-base text-center font-md w-72 text-gray-600 p-10 lg:text-xl lg:w-[1100px]'>
             {statement.thanks}
           </motion.p>

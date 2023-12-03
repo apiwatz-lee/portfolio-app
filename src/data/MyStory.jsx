@@ -13,21 +13,21 @@ export const story = [
     {
         id:1,
         title:'When I was a Child',
-        description:`I am Thai with Chinese heritage, born and raised in a warm family in Hat Yai, Thailand. 
-        My father has a great passion for computers, so I've had the opportunity to play with computers since I was a child. 
+        description:`I am Thai of Chinese descent, born and raised in the warm family atmosphere of Hat Yai, Thailand. 
+        My father has a strong interest in computers, so I had the opportunity to play with computers since I was a child. 
         Our house even has a dedicated computer room.
-        I still don't know exactly what I like, but I do know that I enjoy playing computer games. 
-        However, being a kid hooked on games seemed like a phase that lasted longer than expected.`,
+        Back then, I wasn't sure about my interests, 
+        but I knew I enjoyed playing computer games.
+        However, being a kid who spent a lot of time with games seemed somewhat excessive.
+        `,
         img:child,
     },
     {
         id:2,
         title:'Primary and Secondary School',
-        description:`At that time, they used to send me to computer competitions, 
-        and I even won second place. Unfortunately, 
-        we didn't have a mobile phone with a camera back then, 
-        so I'll share this picture instead. 
-        Can you guess who I am? 😂`,
+        description:`During primary school, I was sent to participate in a computer competition and even secured the second prize. 
+        Unfortunately, we didn't have a mobile phone with a camera at that time, 
+        so I'll share this text instead of a photo (Can you guess who I am? 😂).`,
         img:primary,
     },
     {
@@ -42,10 +42,10 @@ export const story = [
     {
         id:4,
         title:'My First Job',
-        description:`After completing my studies, my parents encouraged me to gain practical experience before pursuing further education. 
-        I decided to work at Southland Rubber Co., Ltd. as a Procurement Officer. 
-        My role involved visiting suppliers to establish strong relationships and conducting market analysis to adjust the company's procurement strategy. 
-        While it's been okay, I've found myself questioning if this is truly what I'm passionate about.`,
+        description:`After completing my studies, my parents wanted me to gain external experience before returning to manage the family business. 
+        Thus, I worked at Southland Rubber Co., Ltd as a Procurement Officer. 
+        My responsibilities included visiting suppliers to build good relationships and analyzing markets to adjust the company's raw material procurement strategy. 
+        It was okay, but I questioned if it was what I truly enjoyed.`,
         img:firstJob,
     },
     {
@@ -69,16 +69,17 @@ export const story = [
     {
         id:7,
         title:'Learning Process',
-        description:`Fast forward, and I'm knee-deep in the joy of learning, tweaking, and creating. 
-        It's like painting on a canvas, but instead of colors, it's lines of code bringing my ideas to life.`,
+        description:`I enjoy learning and honing my skills. 
+        I delight in dedicating time to creatively craft the projects I am passionate about. 
+        When the work takes shape, I feel that it truly adds vibrant colors to my life.`,
         img:learning,
   },
     {
         id:8,
         title:'My First Resignation',
-        description:`After gaining confidence that I truly love it, I made the decision to resign from my current job as I enter my fourth year. 
-        June 6, 2023, marked the last day of my employment at the company. 
-        It's the day I had to step out of my comfort zone to pursue my dreams and chart a new path for myself.`,
+        description:`Once confident that I genuinely love it, 
+        I made the decision to resign from my job on June 6, 2023. 
+        It was the last day at the company, marking the day I had to step out of my comfort zone to pursue my dreams and change my career path.`,
         img:firstResign,
     },
     {
@@ -86,8 +87,8 @@ export const story = [
         title:'Joined Coding Bootcamp',
         description:`I've decided to enroll in the Full-Stack Developer Bootcamp at TechUp Institute to change my career path. 
         I've flown from Hat Yai to Bangkok, solely focusing on my studies. 
-        The course covers HTML, CSS, JavaScript, React.js, Node.js, Express, PostgreSQL, MongoDB, Git, and GitHub. 
-        Additionally, I'll have the opportunity to work on real projects, providing hands-on experience in the field.`,
+        The course covered HTML, CSS, JAVASCRIPT, REACT.JS, NODE.JS, EXPRESS, POSTGRESQL, MONGODB, 
+        GIT AND GITHUB, and I worked on real projects.`,
         img:bootcamp,
     },
   ]

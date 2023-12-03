@@ -18,7 +18,7 @@ const Navbar = ({page}) => {
 
     const mobileMenu = links.map((link,index)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT'?` w-[90px] border border-[#A8A8A1]`:null}`}>
+            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white`}>
                 <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>
             </li>)
     })
@@ -31,9 +31,6 @@ const Navbar = ({page}) => {
 
     <>
         <aside className={`lg:hidden fixed bg-[#FEFCFF] duration-300  ${isOpen ? 'right-0':'right-[-100%]'} h-full w-[150px] flex flex-col justify-center items-center gap-10`}>
-            <div className='w-full absolute top-20 flex justify-end px-8'>
-                {/* <FaTimes className='text-2xl hover:text-white duration-300' onClick={toggleMenu}/> */}
-            </div>
             {mobileMenu}
         </aside>
         
