@@ -27,7 +27,7 @@ const ContactForm = () => {
             <Input name='Email' id='email' type='email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
             <Input name='Subject' id='subject' type='text' value={subject} onChange={(e)=>{setSubject(e.target.value)}}/>
             <Textarea title='Message' name='message' id='contactForm' value={message} onChange={(e)=>{setMessage(e.target.value)}}/>    
-            <button className='border px-5 py-2 rounded-full duration-300 font-medium hover:bg-[#3E3F42] hover:text-white' type='submit'>Send to Apiwat Lee</button>
+            <button className='border px-5 py-2 rounded-full duration-300 font-medium text-sm lg:text-base hover:bg-[#3E3F42] hover:text-white' type='submit'>Send to Apiwat Lee</button>
                           
         </form>                         
     </main>
