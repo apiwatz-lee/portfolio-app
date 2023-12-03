@@ -6,7 +6,6 @@ import { statement } from "../data/Statement"
 
 const Blog = () => {
 
-
   const leftAnimate = {
     offscreen:{opacity:0,translateX:-100},
     onscreen:{opacity:1,translateX:0},

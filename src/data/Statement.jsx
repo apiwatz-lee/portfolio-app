@@ -3,7 +3,7 @@ export const statement = {
     greeting:'Hey ! Nice to meet you 😃',
     introduction:[
       {id:1,description:"I'm Apiwat Leelasawatsuk"},
-      {id:2,description:"Who Enjoyed Front-End Development"},
+      {id:2,description:"Passionate with front-end development"},
       {id:3,description:"Based in Bangkok,Thailand"}
     ],
     thanks:`Thank you for taking the time to read my story up to this point. 
