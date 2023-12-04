@@ -1,11 +1,13 @@
-import React from 'react'
-import { useState,useRef } from 'react'
+import React,{ useState,useRef } from 'react'
 import Input from './Input'
 import Textarea from './Textarea'
 import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import ContactLoading from './ContactLoading';
 
-const ContactForm = () => {
+
+const ContactForm = () => {  
 
     const form = useRef();
     const navigate = useNavigate();
@@ -18,6 +20,8 @@ const ContactForm = () => {
 
     const [active,setActive] = useState(false)
     const [errorMessage,setErrorMessage] = useState({})
+
+    const [isLoading,setIsLoading] = useState(false)
       
     const handleOnblur = () => {
       setActive(true)
@@ -36,20 +40,18 @@ const ContactForm = () => {
         setErrorMessage({email:'Please fill in your email'})
       }else if(!message){
         setErrorMessage({message:'Please fill in your message'})
-      }else {
-        try {
+      }else {   
+          setIsLoading(true)
           emailjs
           .sendForm('service_mwr3m97', 'template_u0c80az', form.current, 'nXyMDY5ObVhIKjeKs')
           .then((result) => {
               console.log(result.text);
               console.log('message sent')
-              navigate("/")
+              setIsLoading(false)
+              navigate("/")         
           }, (error) => {
               console.log(error.text);
-          });
-        } catch (error) {
-          console.log(error);
-        }
+          });      
       }  
     }
    
@@ -100,10 +102,16 @@ const ContactForm = () => {
             errorMessage={errorMessage}
             />    
      
-            <button className='border px-5 py-2 rounded-full duration-300 font-medium text-sm lg:text-base hover:bg-[#3E3F42] hover:text-white' type='submit'>
+            <button 
+            className='border px-5 py-2 rounded-full duration-300 font-medium text-sm lg:text-base hover:bg-[#3E3F42] hover:text-white' 
+            type='submit'>
               Send to Apiwat Lee
             </button>
-        </form>                         
+           
+            <ContactLoading isLoading={isLoading}/>       
+
+        </form>             
+                       
     </main>
      
   )
