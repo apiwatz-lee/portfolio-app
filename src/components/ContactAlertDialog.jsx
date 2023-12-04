@@ -25,7 +25,12 @@ const ContactAlertDialog = ({handleSubmit,isSubmit,handleCancel}) => {
 
     },[isSubmit])
 
-
+    const message = {
+        header:'Confirmation',
+        description:'Thank you for reaching out. Please be aware that this information will be sent directly to my email.',
+        cancel:'Cancel',
+        corect:'Got it!'
+    }
     return (
         <>
             <AlertDialog
@@ -37,19 +42,19 @@ const ContactAlertDialog = ({handleSubmit,isSubmit,handleCancel}) => {
                     <AlertDialogContent>
 
                         <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                            Confirmation 
+                            {message.header} 
                         </AlertDialogHeader>
 
                         <AlertDialogBody>
-                            Thanks for messaging me, is your information correct?
+                            {message.description}
                         </AlertDialogBody>
 
                         <AlertDialogFooter className='flex gap-5'>
                             <button className='p-2 rounded-xl bg-red-800 text-white' ref={cancelRef} onClick={handleCancel}>
-                                Cancel
+                                {message.cancel}
                             </button>
                             <button className='p-2 rounded-xl bg-teal-800 text-white' onClick={handleSubmit} ml={3}>
-                                Correct
+                                {message.corect}
                             </button>
                         </AlertDialogFooter>
 

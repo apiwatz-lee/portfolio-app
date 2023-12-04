@@ -47,9 +47,7 @@ const Navbar = ({page}) => {
             <div className='lg:hidden duration-500'>
                     {isOpen ? <FaTimes onClick={toggleMenu} className='text-2xl hover:text-slate-500'/> : <FaBars onClick={toggleMenu} className='text-2xl hover:text-slate-500'/>}
             </div>
-        </nav> 
-
-        
+        </nav>         
     </>
 
   )
