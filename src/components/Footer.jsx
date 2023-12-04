@@ -14,7 +14,7 @@ const Footer = () => {
         })
 
   return (
-    <footer className='flex flex-col items-center justify-center lg:justify-around gap-10 mt-5 h-52 bg-mountain lg:gap-5 lg:flex-row lg:h-36'>
+    <footer className='flex flex-col items-center justify-center lg:justify-around gap-10 mt-5 h-52 bg-mountain bg-no-repeat lg:gap-5 lg:flex-row lg:h-36'>
         <section className='flex justify-center items-center gap-2 w-72'>
           <AiOutlineMail/>
           <p>apiwatz.lee@gmail.com</p>
