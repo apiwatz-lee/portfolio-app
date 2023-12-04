@@ -5,14 +5,11 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import MyStories from './pages/MyStories'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import { ChakraProvider } from '@chakra-ui/react'
 
 function App() {
 
   return (
     <>
-      <ChakraProvider>
         <BrowserRouter>
           <Routes>
               <Route path='/' element={<HomePage/>}/>
@@ -22,7 +19,6 @@ function App() {
               <Route path='/contact' element={<Contact/>}/>
           </Routes>
         </BrowserRouter>
-      </ChakraProvider>
     </>
   )
 }

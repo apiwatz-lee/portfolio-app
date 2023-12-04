@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useDisclosure } from "@chakra-ui/react";
 import {
     AlertDialog,
     AlertDialogBody,
@@ -6,49 +8,57 @@ import {
     AlertDialogHeader,
     AlertDialogContent,
     AlertDialogOverlay,
-    AlertDialogCloseButton,
-  } from '@chakra-ui/react'
-import { useDisclosure } from '@chakra-ui/react'
-import { Button } from '@chakra-ui/react'
-import { useEffect } from 'react'
+  } from "@chakra-ui/react";
 
-const ContactAlertDialog = ({handleSubmit}) => {
+const ContactAlertDialog = ({handleSubmit,isSubmit,handleCancel}) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cancelRef = React.useRef()
+    console.log(isSubmit);
+    useEffect(()=>{
 
-   
-    
-  return (
-    <>
-    <Button onClick={onOpen}>Send To Apiwat Lee</Button>
-    <AlertDialog
-      motionPreset='slideInBottom'
-      leastDestructiveRef={cancelRef}
-      onClose={onClose}
-      isOpen={isOpen}
-      isCentered
-    >
-      <AlertDialogOverlay />
+        if(isSubmit){
+            onOpen();
+        }else{
+            onClose();
+        }
 
-      <AlertDialogContent>
-        <AlertDialogHeader>Confirmation</AlertDialogHeader>
-        <AlertDialogCloseButton />
-        <AlertDialogBody>
-          Are you sure you want to send this message to Mr.Apiwat Lee
-        </AlertDialogBody>
-        <AlertDialogFooter>
-          <Button ref={cancelRef} onClick={onClose}>
-            No
-          </Button>
-          <Button colorScheme='red' ml={3} onClick={handleSubmit}>
-            Yes
-          </Button>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
-  </>
-  )
+    },[isSubmit])
+
+
+    return (
+        <>
+            <AlertDialog
+                isOpen={isOpen}
+                leastDestructiveRef={cancelRef}
+                onClose={onClose}>
+
+                <AlertDialogOverlay>
+                    <AlertDialogContent>
+
+                        <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                            Confirmation 
+                        </AlertDialogHeader>
+
+                        <AlertDialogBody>
+                            Thanks for messaging me, is your information correct?
+                        </AlertDialogBody>
+
+                        <AlertDialogFooter className='flex gap-5'>
+                            <button className='p-2 rounded-xl bg-red-800 text-white' ref={cancelRef} onClick={handleCancel}>
+                                Cancel
+                            </button>
+                            <button className='p-2 rounded-xl bg-teal-800 text-white' onClick={handleSubmit} ml={3}>
+                                Correct
+                            </button>
+                        </AlertDialogFooter>
+
+                    </AlertDialogContent>
+                </AlertDialogOverlay>
+
+            </AlertDialog>
+        </>
+    )
 }
 
 export default ContactAlertDialog

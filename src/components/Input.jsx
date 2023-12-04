@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = ({name,id,type,value,onChange,onBlur,errorMessage}) => {
+const Input = ({name,id,type,value,onChange,errorMessage}) => {
 
   return (
     <div className='w-full flex flex-col justify-between items-center gap-1 lg:w-72'>
@@ -8,7 +8,6 @@ const Input = ({name,id,type,value,onChange,onBlur,errorMessage}) => {
         <input name={name} id={id} type={type} 
         value={value}
         onChange={onChange} 
-        onBlur={onBlur} 
         className='border h-9 w-58 lg:w-64 rounded-xl p-5 outline-none'/>
         {errorMessage ? <p className={`text-xs lg:w-5/6 text-red-500`}>{errorMessage[id]}</p>:null}  
     </div>

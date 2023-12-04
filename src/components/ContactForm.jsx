@@ -5,9 +5,12 @@ import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import ContactLoading from './ContactLoading';
+import ContactAlertDialog from './ContactAlertDialog';
+import { useDisclosure } from "@chakra-ui/react";
 
+  const ContactForm = () => {  
 
-const ContactForm = () => {  
+    const { onClose } = useDisclosure()
 
     const form = useRef();
     const navigate = useNavigate();
@@ -17,19 +20,13 @@ const ContactForm = () => {
     const [email,setEmail] = useState('')
     const [subject,setSubject] = useState('')
     const [message,setMessage] = useState('')
-
-    const [active,setActive] = useState(false)
     const [errorMessage,setErrorMessage] = useState({})
-
     const [isLoading,setIsLoading] = useState(false)
+    const [isSubmit,setIsSubmit] = useState(false)
       
-    const handleOnblur = () => {
-      setActive(true)
-    }
     
-    const handleSubmit = (e) => {
-      e.preventDefault()
-
+    const handleValidate = (e) =>  {
+      e.preventDefault();
       if(!firstname){
         setErrorMessage({firstname:'Please fill in your first name'})
       } else if(!lastname){
@@ -40,19 +37,32 @@ const ContactForm = () => {
         setErrorMessage({email:'Please fill in your email'})
       }else if(!message){
         setErrorMessage({message:'Please fill in your message'})
-      }else {   
-          setIsLoading(true)
-          emailjs
-          .sendForm('service_mwr3m97', 'template_u0c80az', form.current, 'nXyMDY5ObVhIKjeKs')
-          .then((result) => {
-              console.log(result.text);
-              console.log('message sent')
-              setIsLoading(false)
-              navigate("/")         
-          }, (error) => {
-              console.log(error.text);
-          });      
-      }  
+      }else{
+        setErrorMessage(null)
+        setIsSubmit(true)
+      }
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      onClose()     
+      setIsLoading(true)
+      emailjs
+      .sendForm('service_mwr3m97', 'template_u0c80az', form.current, 'nXyMDY5ObVhIKjeKs')
+      .then((result) => {
+          console.log(result.text);
+          console.log('message sent')
+          setIsLoading(false)
+          navigate("/")         
+      }, (error) => {
+          console.log(error.text);
+      });      
+     
+    }
+
+    const handleCancel = () => {
+      onClose()
+      setIsSubmit(false)
     }
    
   return (
@@ -61,57 +71,51 @@ const ContactForm = () => {
         <h1 className='text-center font-bold text-4xl mt-5'>Contact</h1>
         <form className='border w-5/6 flex flex-col justify-center items-center gap-5 rounded-xl p-10 bg-[#fcfbfb83] lg:w-[800px] lg:flex-row lg:flex-wrap' id='contactForm'
         ref={form}
-        onSubmit={handleSubmit}
         >
             <Input name='Firstname' id='firstname' type='text' 
             value={firstname} 
             onChange={(e)=>{setFirstname(e.target.value)}}
-            onBlur={handleOnblur}
-            active={active}
             errorMessage={errorMessage}
             />
 
             <Input name='Lastname' id='lastname' type='text' 
             value={lastname} 
             onChange={(e)=>{setLastname(e.target.value)}}
-            onBlur={handleOnblur}
-            active={active}
             errorMessage={errorMessage}
             />
             <Input name='Subject' id='subject' type='text' 
             value={subject} 
             onChange={(e)=>{setSubject(e.target.value)}}
-            onBlur={handleOnblur}
-            active={active}
             errorMessage={errorMessage}
             />
 
             <Input name='Email' id='email' type='email' 
             value={email} 
             onChange={(e)=>{setEmail(e.target.value)}}
-            onBlur={handleOnblur}
-            active={active}
             errorMessage={errorMessage}
             />
 
             <Textarea title='Message' name='message' id='message' 
             value={message} 
             onChange={(e)=>{setMessage(e.target.value)}}
-            onBlur={handleOnblur}
-            active={active}
             errorMessage={errorMessage}
             />    
      
-            <button 
-            className='border px-5 py-2 rounded-full duration-300 font-medium text-sm lg:text-base hover:bg-[#3E3F42] hover:text-white' 
-            type='submit'>
+            <button className='border px-5 py-2 rounded-full duration-300 font-medium text-sm lg:text-base hover:bg-[#3E3F42] hover:text-white'
+            onClick={handleValidate} 
+            >
               Send to Apiwat Lee
             </button>
+
+            <ContactAlertDialog 
+            handleSubmit={handleSubmit} 
+            isSubmit={isSubmit}
+            handleCancel={handleCancel}
+            />
            
             <ContactLoading isLoading={isLoading}/>       
 
-        </form>             
-                       
+        </form>                 
     </main>
      
   )
