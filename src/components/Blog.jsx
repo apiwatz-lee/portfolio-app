@@ -45,7 +45,7 @@ const Blog = () => {
               transition={{duration:1}}
               viewport={{once:true,amount:0.5}}
               variants={topAnimate}
-              className='h-auto flex flex-col justify-center items-center gap-10 my-2 border' 
+              className='h-auto flex flex-col justify-center items-center gap-10 my-2' 
               key={item.id}>
                   <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
                   <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>

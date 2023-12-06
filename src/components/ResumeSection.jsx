@@ -13,7 +13,7 @@ const ResumeSection = () => {
             <div className='flex flex-col justify-center items-center gap-5'>
               <p className='text-center'>Thank you for your interest in me. Here is my resume.</p>
               <a href={MyResume} target='_blank'>
-                <button className='border p-3 rounded-full duration-300 hover:bg-red-800 hover:text-white'>Download CV</button>
+                <button className='border p-3 rounded-full duration-300 hover:bg-gray-700 hover:text-white'>Download CV</button>
               </a>
             </div>
 
