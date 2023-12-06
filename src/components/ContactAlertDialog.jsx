@@ -14,7 +14,6 @@ const ContactAlertDialog = ({handleSubmit,isSubmit,handleCancel}) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cancelRef = React.useRef()
-    console.log(isSubmit);
     useEffect(()=>{
 
         if(isSubmit){

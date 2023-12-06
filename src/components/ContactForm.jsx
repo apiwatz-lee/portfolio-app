@@ -1,4 +1,4 @@
-import React,{ useState,useRef } from 'react'
+import React,{ useRef,useEffect} from 'react'
 import Input from './Input'
 import Textarea from './Textarea'
 import emailjs from '@emailjs/browser';
@@ -7,36 +7,43 @@ import ContactLoading from './ContactLoading';
 import ContactAlertDialog from './ContactAlertDialog';
 import { useDisclosure } from "@chakra-ui/react";
 import ReCAPTCHA from "react-google-recaptcha"
+import { useContext } from 'react';
+import { AppContext } from '../App';
 
-  const ContactForm = () => {  
 
-    const { onClose } = useDisclosure()
-
-    const form = useRef();
-    const navigate = useNavigate();
-
-    const [firstname,setFirstname] = useState('')
-    const [lastname,setLastname] = useState('')
-    const [email,setEmail] = useState('')
-    const [subject,setSubject] = useState('')
-    const [message,setMessage] = useState('')
-    const [errorMessage,setErrorMessage] = useState({})
-    const [isLoading,setIsLoading] = useState(false)
-    const [isSubmit,setIsSubmit] = useState(false)
-    const [capVal,setCapVal] = useState(false)
-      
+  const ContactForm = () => {
     
-    const handleValidate = (e) =>  {
+    const {
+      contact,
+      setContact,
+      errorMessage,
+      setErrorMessage,
+      isLoading,
+      setIsLoading,
+      isSubmit,
+      setIsSubmit,
+      setIsSuccess,
+      capVal,
+      setCapVal} = useContext(AppContext)
+ 
+      const { onClose } = useDisclosure()
+
+      const form = useRef();
+      const navigate = useNavigate(); 
+    
+      const handleValidate = (e) =>  {
       e.preventDefault();
-      if(!firstname){
+      if(!contact.firstname){
         setErrorMessage({firstname:'Please fill in your first name'})
-      } else if(!lastname){
+      } else if(!contact.lastname){
         setErrorMessage({lastname:'Please fill in your last name'})
-      }else if(!subject){
+      }else if(!contact.subject){
         setErrorMessage({subject:'Please fill in your subject'})
-      }else if(!email){
+      }else if(!contact.email){
         setErrorMessage({email:'Please fill in your email'})
-      }else if(!message){
+      }else if(!(/\S+@\S+\.\S+/.test(contact.email))){
+        setErrorMessage({email:'Your email is invalid'})
+      }else if(!contact.message){
         setErrorMessage({message:'Please fill in your message'})
       }else{
         setErrorMessage(null)
@@ -44,27 +51,39 @@ import ReCAPTCHA from "react-google-recaptcha"
       }
     }
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      onClose()     
-      setIsLoading(true)
-      emailjs
-      .sendForm('service_mwr3m97', 'template_u0c80az', form.current, 'nXyMDY5ObVhIKjeKs')
-      .then((result) => {
-          console.log(result.text);
-          console.log('message sent')
-          setIsLoading(false)
-          navigate("/")         
-      }, (error) => {
-          console.log(error.text);
-      });      
-     
-    }
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        onClose()     
+        setIsLoading(true)
+        emailjs
+        .sendForm('service_mwr3m97', 'template_u0c80az', form.current, 'nXyMDY5ObVhIKjeKs')
+        .then((result) => {
+            console.log(result.text);
+            console.log('message sent')
+            setIsLoading(false)
+            navigate("/")
+            setIsSuccess(true)
+            setContact({
+              firstname:'',
+              lastname:'',
+              email:'',
+              subject:'',
+              message:'',
+            })
+            setCapVal(false)
+            setIsSubmit(false)
+                    
+        }, (error) => {
+            console.log(error.text);
+        });      
+      
+      }
 
-    const handleCancel = () => {
-      onClose()
-      setIsSubmit(false)
-    }
+      const handleCancel = () => {
+        onClose()
+        setIsSubmit(false)
+      }
+
    
   return (
 
@@ -79,37 +98,38 @@ import ReCAPTCHA from "react-google-recaptcha"
         <form className='border w-5/6 flex flex-col justify-center items-center gap-5 rounded-xl p-10 bg-[#fcfbfb83] lg:w-[800px] lg:flex-row lg:flex-wrap' id='contactForm'
         ref={form}
         >
-            <Input name='Firstname' id='firstname' type='text'
+           
+            <Input name='Firstname' id='firstname' type='text' placeholder='Will'
             disabled={!capVal} 
-            value={firstname} 
-            onChange={(e)=>{setFirstname(e.target.value)}}
+            value={contact.firstname} 
+            onChange={(e)=>{setContact({...contact,firstname:e.target.value})}}
             errorMessage={errorMessage}
             />
 
-            <Input name='Lastname' id='lastname' type='text' 
+            <Input name='Lastname' id='lastname' type='text' placeholder='Smith'
             disabled={!capVal} 
-            value={lastname} 
-            onChange={(e)=>{setLastname(e.target.value)}}
+            value={contact.lastname} 
+            onChange={(e)=>{setContact({...contact,lastname:e.target.value})}}
             errorMessage={errorMessage}
             />
-            <Input name='Subject' id='subject' type='text' 
+            <Input name='Subject' id='subject' type='text'  placeholder='Job opportunity'
             disabled={!capVal} 
-            value={subject} 
-            onChange={(e)=>{setSubject(e.target.value)}}
+            value={contact.subject} 
+            onChange={(e)=>{setContact({...contact,subject:e.target.value})}}
             errorMessage={errorMessage}
             />
 
-            <Input name='Email' id='email' type='email' 
+            <Input name='Email' id='email' type='email' placeholder='willsmith@gmail.com'
             disabled={!capVal} 
-            value={email} 
-            onChange={(e)=>{setEmail(e.target.value)}}
+            value={contact.email} 
+            onChange={(e)=>{setContact({...contact,email:e.target.value})}}
             errorMessage={errorMessage}
             />
 
             <Textarea title='Message' name='message' id='message' 
             disabled={!capVal} 
-            value={message} 
-            onChange={(e)=>{setMessage(e.target.value)}}
+            value={contact.message} 
+            onChange={(e)=>{setContact({...contact,message:e.target.value})}}
             errorMessage={errorMessage}
             />                  
      
@@ -127,7 +147,9 @@ import ReCAPTCHA from "react-google-recaptcha"
             handleCancel={handleCancel}
             />
            
-            <ContactLoading isLoading={isLoading}/>       
+            <ContactLoading 
+            isLoading={isLoading}
+            />       
 
         </form>                 
     </main>

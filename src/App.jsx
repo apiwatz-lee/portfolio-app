@@ -5,11 +5,43 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import MyStories from './pages/MyStories'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import { useState,createContext } from 'react';
+
+export const AppContext = createContext(null)
 
 function App() {
 
+    const [contact,setContact] = useState({
+      firstname:'',
+      lastname:'',
+      email:'',
+      subject:'',
+      message:'',
+    })
+    const [errorMessage,setErrorMessage] = useState({})
+
+    const [isLoading,setIsLoading] = useState(false)
+    const [isSubmit,setIsSubmit] = useState(false)
+    const [isSuccess,setIsSuccess] = useState(false) 
+    const [capVal,setCapVal] = useState(false)
+
   return (
     <>
+      <AppContext.Provider 
+      value={{
+        contact,
+        setContact,
+        errorMessage,
+        setErrorMessage,
+        isLoading,
+        setIsLoading,
+        isSubmit,
+        setIsSubmit,
+        isSuccess,
+        setIsSuccess,
+        capVal,
+        setCapVal}}>
+
         <BrowserRouter>
           <Routes>
               <Route path='/' element={<HomePage/>}/>
@@ -19,6 +51,7 @@ function App() {
               <Route path='/contact' element={<Contact/>}/>
           </Routes>
         </BrowserRouter>
+      </AppContext.Provider>
     </>
   )
 }
