@@ -7,7 +7,7 @@ const ButtonLink = ({path,text}) => {
          <Link to={path}>
             <button 
                 onClick={()=>{window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}} 
-                className='border font-medium p-3 rounded-lg duration-300 hover:bg-gray-700 hover:text-white'
+                className='border font-medium p-3 rounded-lg duration-300 hover:bg-gray-700 hover:text-white animate-bounce'
                 >                
                 {text}
             </button>

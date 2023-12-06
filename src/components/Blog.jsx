@@ -40,14 +40,14 @@ const Blog = () => {
                   <motion.p 
                      initial={'offscreen'}
                      whileInView={'onscreen'}
-                     transition={{duration:0.7,delay:0.4}}
+                     transition={{duration:0.8,delay:0.4}}
                      viewport={{once:true,amount:0.5}}
                      variants={topAnimate}
                     className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</motion.p>
                   <motion.img 
                     initial={'offscreen'}
                     whileInView={'onscreen'}
-                    transition={{duration:0.7,delay:0.2}}
+                    transition={{duration:0.8,delay:0.2}}
                     viewport={{once:true,amount:0.5}}
                     variants={topAnimate}
                     src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
@@ -69,7 +69,7 @@ const Blog = () => {
                     <motion.img 
                     initial={'offscreen'}
                     whileInView={'onscreen'}
-                    transition={{duration:0.7,delay:0.2}}
+                    transition={{duration:0.8,delay:0.2}}
                     viewport={{once:true,amount:0.5}}
                     variants={topAnimate}
                     src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
@@ -77,7 +77,7 @@ const Blog = () => {
                     <motion.p 
                     initial={'offscreen'}
                     whileInView={'onscreen'}
-                    transition={{duration:0.7,delay:0.4}}
+                    transition={{duration:0.8,delay:0.4}}
                     viewport={{once:true,amount:0.5}}
                     variants={topAnimate}
                     className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</motion.p>

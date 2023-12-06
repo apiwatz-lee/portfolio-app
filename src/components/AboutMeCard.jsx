@@ -23,7 +23,7 @@ const AboutMeCard = () => {
               </div>
             </section>
 
-            <ButtonLink path='/aboutme' text='Get to know me'/>       
+            {/* <ButtonLink path='/aboutme' text='Get to know me'/>        */}
               
           </main>
     </>
