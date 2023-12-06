@@ -9,6 +9,7 @@ import { useState,createContext } from 'react';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
+
 export const AppContext = createContext(null)
 
 function App() {
