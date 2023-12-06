@@ -6,6 +6,8 @@ import Contact from './pages/Contact'
 import MyStories from './pages/MyStories'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import { useState,createContext } from 'react';
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 export const AppContext = createContext(null)
 
@@ -19,7 +21,6 @@ function App() {
       message:'',
     })
     const [errorMessage,setErrorMessage] = useState({})
-
     const [isLoading,setIsLoading] = useState(false)
     const [isSubmit,setIsSubmit] = useState(false)
     const [isSuccess,setIsSuccess] = useState(false) 
@@ -43,13 +44,15 @@ function App() {
         setCapVal}}>
 
         <BrowserRouter>
-          <Routes>
-              <Route path='/' element={<HomePage/>}/>
-              <Route path='/aboutme' element={<MyStories/>}/>
-              <Route path='/resume' element={<Resume/>}/>
-              <Route path='/projects' element={<Projects/>}/>
-              <Route path='/contact' element={<Contact/>}/>
-          </Routes>
+          <Navbar/>
+            <Routes>
+                <Route path='/' element={<HomePage/>}/>
+                <Route path='/aboutme' element={<MyStories/>}/>
+                <Route path='/resume' element={<Resume/>}/>
+                <Route path='/projects' element={<Projects/>}/>
+                <Route path='/contact' element={<Contact/>}/>
+            </Routes>
+          <Footer/>
         </BrowserRouter>
       </AppContext.Provider>
     </>

@@ -10,7 +10,7 @@ const ProjectSection = () => {
           item.id % 2 === 0 ?
     
           <Link to={item.url} key={item.id} target='_blank'>  
-            <section className='border flex flex-col-reverse w-96 h-auto rounded-lg shadow-lg p-10 gap-10 lg:flex-row lg:w-[1200px] mx-20' >  
+            <section className='border flex flex-col-reverse w-96 h-auto rounded-lg shadow-lg p-10 gap-10 lg:flex-row lg:w-[1200px] mx-20'>  
               <div className='flex flex-col gap-5 justify-center items-center lg:justify-evenly lg:text-center'>
                 <h1 className='font-bold text-lg lg:text-2xl'>{item.name}</h1>
                 <p className='text-center text-gray-500'>{item.description}</p>
@@ -21,7 +21,7 @@ const ProjectSection = () => {
                 </div>
               </div>
     
-              <div className='text-center'>
+              <div className='text-center border'>
                 <img src={item.img} alt={item.name} className='rounded-xl shadow-lg object-cover'/>
               </div>
             </section>
@@ -48,11 +48,11 @@ const ProjectSection = () => {
       })
       
   return (
-    <main className='font-montserrat flex flex-col justify-center items-center gap-10'>
-    <h1 className='text-center font-bold text-4xl mt-5'>Projects</h1>
-    <Skills/>
-    {projectCard}
-</main>
+    <main className='font-montserrat flex flex-col justify-center items-center gap-10 w-5/6'>
+      <h1 className='text-center font-bold text-4xl mt-5'>Projects</h1>
+      <Skills/>
+      {projectCard}
+    </main>
   )
 }
 
