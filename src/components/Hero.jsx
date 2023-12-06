@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import {motto} from "../data/HomePage"
+import { AppContext } from '../App';
+import { useEffect } from 'react';
+import { useToast } from '@chakra-ui/react';
 
 
 const Hero = () => {
-  
+
+  const {isSuccess,setIsSuccess} = useContext(AppContext)
+  const toast = useToast()
+
+  useEffect(()=>{
+    if(isSuccess)
+      {toast({
+        title: 'Message sent.',
+        description: "We've sent your message to Apiwat Lee.",
+        status: 'success',
+        duration: 5000,
+        isClosable: true,
+      })
+    }
+    setIsSuccess(false)
+  },[])
+
   return (
     <>
       <main className='bg-mountain bg-cover bg-bottom flex flex-col h-[70%] pb-64 justify-center items-center gap-10'>
