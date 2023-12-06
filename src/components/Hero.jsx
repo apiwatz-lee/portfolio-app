@@ -4,6 +4,8 @@ import {motto} from "../data/HomePage"
 import { AppContext } from '../App';
 import { useEffect } from 'react';
 import { useToast } from '@chakra-ui/react';
+import Skills from './Skills';
+import { Button } from '@chakra-ui/react';
 
 
 const Hero = () => {
@@ -46,7 +48,7 @@ const Hero = () => {
             <span className='text-[20px] lg:text-3xl'>"</span> 
           </section>
         
-          {/* <Skills/> */}
+          <Skills/>
           
       </main>
      

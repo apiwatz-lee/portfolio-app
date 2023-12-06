@@ -11,14 +11,22 @@ const Navbar = ({page}) => {
 
     const desktopMenu = links.map((link,index)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md duration-300 hover:bg-[#3E3F42] hover:text-white ${link.name === 'CONTACT' ? `border border-slate-900`:null}`}>
+            <li key={index} className={`flex justify-center rounded-md duration-300 hover:bg-gray-700 hover:text-white ${link.name === 'CONTACT' ? `border border-slate-900`:null}`}
+            onClick={()=>{
+                window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+            }}
+            >
                 <Link to={link.path} className='p-2'>{link.name}</Link>
             </li>)
     })
 
     const mobileMenu = links.map((link,index)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white`} onClick={()=>{setIsOpen(!isOpen)}}>
+            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-gray-700 hover:text-white`} 
+            onClick={()=>{
+                setIsOpen(!isOpen)
+                window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                }}>
                 <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>
             </li>)
     })

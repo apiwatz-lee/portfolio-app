@@ -7,6 +7,6 @@ export const statement = {
       {id:3,description:"Based in Bangkok,Thailand"}
     ],
     thanks:`Thank you for taking the time to read my story up to this point. 
-    If you enjoyed my journey and would like to be a part of it, please consider taking a look at my resume. 
+    If you enjoyed my journey and would like to be a part of it, please consider taking a look at my projects & resume. 
     Your consideration means a lot to me.`
 }
