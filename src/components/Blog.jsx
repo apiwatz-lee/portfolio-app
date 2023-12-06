@@ -20,7 +20,7 @@ const Blog = () => {
         <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
         <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
           <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
-          <p className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</p>
+          <p className='w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10'>{item.description}</p>
         </div>
       </section>
       :
@@ -43,7 +43,7 @@ const Blog = () => {
                      transition={{duration:0.8,delay:0.4}}
                      viewport={{once:true,amount:0.5}}
                      variants={topAnimate}
-                    className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</motion.p>
+                    className='w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10'>{item.description}</motion.p>
                   <motion.img 
                     initial={'offscreen'}
                     whileInView={'onscreen'}
@@ -80,7 +80,7 @@ const Blog = () => {
                     transition={{duration:0.8,delay:0.4}}
                     viewport={{once:true,amount:0.5}}
                     variants={topAnimate}
-                    className='w-[300px] p-5 text-center text-gray-600 lg:text-md lg:w-[600px] lg:p-10'>{item.description}</motion.p>
+                    className='w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10'>{item.description}</motion.p>
                   </div>
 
               </motion.div>

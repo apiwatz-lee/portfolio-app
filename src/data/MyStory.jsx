@@ -96,7 +96,7 @@ export const story = [
         id:10,
         title:'Oct2023 - TechUp Graduation',
         description:`In October, I successfully completed my studies at TechUp Coding Bootcamp. 
-        However, the learning journey doesn't end there for me. 
+        However, the learning journey doesn't end. 
         I'm considering continuing my education with TypeScript and working on a website project for my older brother related to real estate. 
         While I am in the process of job hunting, 
         ultimately, I have no idea what the future holds – whether I will secure a job or not. What I do know is that currently, 
