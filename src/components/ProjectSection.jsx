@@ -2,6 +2,7 @@ import React from 'react'
 import Skills from './Skills'
 import {projects} from '../data/Projects'
 import { Link } from 'react-router-dom'
+import ButtonLink from './ButtonLink'
 
 
 const ProjectSection = () => {  
@@ -51,8 +52,9 @@ const ProjectSection = () => {
   return (
     <main className='font-montserrat flex flex-col justify-center items-center gap-10 w-5/6 lg:w-auto mb-10'>
       <h1 className='text-center font-bold text-4xl mt-5'>Projects</h1>
-      <Skills/>
+      {/* <Skills/> */}
       {projectCard}
+      <ButtonLink path='/resume' text='Consider my resume'/> 
     </main>
   )
 }

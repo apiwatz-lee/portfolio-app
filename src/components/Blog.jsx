@@ -2,6 +2,7 @@ import React from 'react'
 import { story } from '../data/MyStory'
 import { motion } from 'framer-motion'
 import { statement } from "../data/Statement"
+import ButtonLink from './ButtonLink'
 
 const Blog = () => {
 
@@ -71,9 +72,12 @@ const Blog = () => {
             viewport={{once:true,amount:0.5}}
             transition={{duration:1}}
             variants={topAnimate}
-            className='text-base text-center font-md w-72 text-gray-600 p-10 lg:text-xl lg:w-[1100px]'>
-            {statement.thanks}
+            className='text-base text-center font-md w-72 text-gray-600 px-10 py-4 lg:text-xl lg:w-[1100px]'>
+            {statement.thanks}   
           </motion.p>
+
+
+          <ButtonLink path='/projects' text='See my projects'/> 
 
         </main>   
     </>

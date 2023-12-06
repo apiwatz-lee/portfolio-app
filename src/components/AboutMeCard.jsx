@@ -1,6 +1,8 @@
 import React from 'react'
 import me2 from "../assets/me/me2.jpg"
 import { statement } from "../data/Statement"
+import { Link } from 'react-router-dom'
+import ButtonLink from './ButtonLink'
 
 const AboutMeCard = () => {
     
@@ -20,6 +22,9 @@ const AboutMeCard = () => {
                 {myIntroduction}
               </div>
             </section>
+
+            <ButtonLink path='/aboutme' text='Get to know me'/>       
+              
           </main>
     </>
   )
