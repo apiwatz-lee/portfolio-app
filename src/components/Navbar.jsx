@@ -18,7 +18,7 @@ const Navbar = ({page}) => {
 
     const mobileMenu = links.map((link,index)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white`}>
+            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-[#3E3F42] hover:text-white`} onClick={()=>{setIsOpen(!isOpen)}}>
                 <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>
             </li>)
     })
