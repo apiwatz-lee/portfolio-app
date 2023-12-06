@@ -3,7 +3,6 @@ import { story } from '../data/MyStory'
 import { motion } from 'framer-motion'
 import { statement } from "../data/Statement"
 
-
 const Blog = () => {
 
   const topAnimate = {
@@ -16,7 +15,7 @@ const Blog = () => {
     return (
       item.id === 1 ?
     
-      <section className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' key={item.id}>
+      <section className='h-auto flex flex-col justify-center items-center gap-10 my-2' key={item.id}>
         <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
         <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
           <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
@@ -28,10 +27,10 @@ const Blog = () => {
               <motion.section 
               initial={'offscreen'}
               whileInView={'onscreen'}
-              transition={{duration:0.5}}
+              transition={{duration:1}}
               viewport={{once:true,amount:0.5}}
               variants={topAnimate}
-              className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' 
+              className='h-auto flex flex-col justify-center items-center gap-10 my-2' 
               key={item.id}>
                 <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
                 <div className='flex flex-col-reverse gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
@@ -46,7 +45,7 @@ const Blog = () => {
               transition={{duration:1}}
               viewport={{once:true,amount:0.5}}
               variants={topAnimate}
-              className='h-auto w-full flex flex-col justify-center items-center gap-10 my-2' 
+              className='h-auto flex flex-col justify-center items-center gap-10 my-2 border' 
               key={item.id}>
                   <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
                   <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
