@@ -1,8 +1,8 @@
 import React from 'react'
-import Skills from './Skills'
 import {projects} from '../data/Projects'
 import { Link } from 'react-router-dom'
 import ButtonLink from './ButtonLink'
+import Skills from './Skills'
 
 
 const ProjectSection = () => {  

@@ -51,8 +51,6 @@ const Hero = () => {
           <Skills/>
           
       </main>
-     
-  
     </>
 
   )
