@@ -10,6 +10,7 @@ import {
     AlertDialogOverlay,
   } from "@chakra-ui/react";
 
+
 const ContactAlertDialog = ({handleSubmit,isSubmit,handleCancel}) => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -48,11 +49,11 @@ const ContactAlertDialog = ({handleSubmit,isSubmit,handleCancel}) => {
                             {message.description}
                         </AlertDialogBody>
 
-                        <AlertDialogFooter className='flex gap-5'>
-                            <button className='p-2 rounded-xl bg-red-800 text-white' ref={cancelRef} onClick={handleCancel}>
+                        <AlertDialogFooter className={`flex gap-5`}>
+                            <button className='p-2 rounded-xl bg-gray-400 text-white' ref={cancelRef} onClick={handleCancel}>
                                 {message.cancel}
                             </button>
-                            <button className='p-2 rounded-xl bg-teal-800 text-white' onClick={handleSubmit} ml={3}>
+                            <button className='p-2 rounded-xl bg-gray-800 text-white' onClick={handleSubmit} ml={3}>
                                 {message.corect}
                             </button>
                         </AlertDialogFooter>

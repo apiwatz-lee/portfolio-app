@@ -28,9 +28,9 @@ const Hero = () => {
 
   return (
     <>
-      <main className='bg-mountain bg-cover bg-bottom flex flex-col h-[700px] pb-64 justify-center items-center gap-10'>
+      <main className='bg-mountain bg-cover bg-bottom flex flex-col h-[530px] pb-64 justify-center items-center gap-10'>
           <section className='text-[15px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
-            <span className='text-[20px] lg:text-3xl'>"</span>
+            <span className='text-[20px] text-black lg:text-3xl'>"</span>
               <TypeAnimation
                   sequence={[
                     motto.first,
@@ -45,7 +45,7 @@ const Hero = () => {
                   style={{ fontSize: '1em', display: 'inline-block',color:'#3E3F42' }}
                   repeat={Infinity}
                 />
-            <span className='text-[20px] lg:text-3xl'>"</span> 
+            <span className='text-[20px] text-black lg:text-3xl'>"</span> 
           </section>
         
           <Skills/>
