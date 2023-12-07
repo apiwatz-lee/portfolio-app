@@ -8,7 +8,7 @@ const Input = ({name,id,type,value,onChange,errorMessage,disabled,placeholder}) 
         <input  disabled={disabled}  name={name} id={id} type={type} placeholder={placeholder}
         value={value}
         onChange={onChange} 
-        className='border h-9 w-58 lg:w-64 rounded-xl p-5 outline-none placeholder:text-sm'
+        className='border h-9 w-58 lg:w-64 rounded-xl p-5 outline-none placeholder:text-sm text-black'
         />
         {errorMessage ? <p className={`text-xs lg:w-5/6 text-red-500`}>{errorMessage[id]}</p>:null}  
     </div>

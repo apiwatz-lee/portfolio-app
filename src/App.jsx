@@ -14,6 +14,10 @@ export const AppContext = createContext(null)
 
 function App() {
 
+    const primaryDarkTheme = 'bg-slate-900 text-white'
+    const secondaryDarkTheme = 'bg-slate-800 text-white'
+    const tertiaryDarkTheme = 'bg-slate-700 text-white'
+
     const [contact,setContact] = useState({
       firstname:'',
       lastname:'',
@@ -26,6 +30,8 @@ function App() {
     const [isSubmit,setIsSubmit] = useState(false)
     const [isSuccess,setIsSuccess] = useState(false) 
     const [capVal,setCapVal] = useState(false)
+    const [darkTheme,setDarkTheme] = useState(true)
+
 
   return (
     <>
@@ -42,7 +48,13 @@ function App() {
         isSuccess,
         setIsSuccess,
         capVal,
-        setCapVal}}>
+        setCapVal,
+        darkTheme,
+        setDarkTheme,
+        primaryDarkTheme,
+        secondaryDarkTheme,
+        tertiaryDarkTheme
+        }}>
 
         <BrowserRouter>
           <Navbar/>

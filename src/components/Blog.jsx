@@ -3,8 +3,12 @@ import { story } from '../data/MyStory'
 import { motion } from 'framer-motion'
 import { statement } from "../data/Statement"
 import ButtonLink from './ButtonLink'
+import { useContext } from 'react'
+import { AppContext } from '../App'
 
 const Blog = () => {
+
+  const {darkTheme,secondaryDarkTheme,tertiaryDarkTheme} = useContext(AppContext)
 
   const topAnimate = {
     offscreen:{opacity:0,translateY:100},
@@ -16,11 +20,11 @@ const Blog = () => {
     return (
       item.id === 1 ?
     
-      <section className='h-auto flex flex-col justify-center items-center gap-10 my-2' key={item.id}>
-        <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
-        <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
+      <section className={`h-auto flex flex-col justify-center items-center gap-10 my-2`} key={item.id}>
+        <h1 className={`text-md lg:text-xl font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
+        <div className={`flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg ${darkTheme ? secondaryDarkTheme : null}`}>
           <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
-          <p className='w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10'>{item.description}</p>
+          <p className={`w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10 ${darkTheme ? 'text-white':null}`}>{item.description}</p>
         </div>
       </section>
       :
@@ -31,19 +35,19 @@ const Blog = () => {
                 transition={{duration:0.5}}
                 viewport={{once:true,amount:0.5}}
                 variants={topAnimate}
-                className='h-auto flex flex-col justify-center items-center gap-10 my-2' 
+                className={`h-auto flex flex-col justify-center items-center gap-10 my-2`} 
                 key={item.id}>
 
-                <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
+                <h1 className={`text-md lg:text-xl font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
 
-                <div className='flex flex-col-reverse gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
+                <div className={`flex flex-col-reverse gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg ${darkTheme ? secondaryDarkTheme : null}`}>
                   <motion.p 
                      initial={'offscreen'}
                      whileInView={'onscreen'}
-                     transition={{duration:0.8,delay:0.4}}
+                     transition={{duration:0.8,delay:0.3}}
                      viewport={{once:true,amount:0.5}}
                      variants={topAnimate}
-                    className='w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10'>{item.description}</motion.p>
+                    className={`w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10 ${darkTheme ? 'text-white':null}`}>{item.description}</motion.p>
                   <motion.img 
                     initial={'offscreen'}
                     whileInView={'onscreen'}
@@ -54,18 +58,18 @@ const Blog = () => {
                 </div>
               </motion.section>
       :
-              <motion.div 
+              <motion.section 
               initial={'offscreen'}
               whileInView={'onscreen'}
               transition={{duration:0.5}}
               viewport={{once:true,amount:0.5}}
               variants={topAnimate}
-              className='h-auto flex flex-col justify-center items-center gap-10 my-2' 
+              className={`h-auto flex flex-col justify-center items-center gap-10 my-2`} 
               key={item.id}>
 
-                  <h1 className='text-lg font-bold text-gray-700'>{item.title}</h1>
+                  <h1 className={`text-md lg:text-xl font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
 
-                  <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg'>
+                  <div className={`flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg ${darkTheme ? secondaryDarkTheme : null}`}>
                     <motion.img 
                     initial={'offscreen'}
                     whileInView={'onscreen'}
@@ -77,13 +81,13 @@ const Blog = () => {
                     <motion.p 
                     initial={'offscreen'}
                     whileInView={'onscreen'}
-                    transition={{duration:0.8,delay:0.4}}
+                    transition={{duration:0.8,delay:0.3}}
                     viewport={{once:true,amount:0.5}}
                     variants={topAnimate}
-                    className='w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10'>{item.description}</motion.p>
+                    className={`w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10 ${darkTheme ? 'text-white':null}`}>{item.description}</motion.p>
                   </div>
 
-              </motion.div>
+              </motion.section>
      
     )
   
@@ -91,7 +95,7 @@ const Blog = () => {
 
   return (
     <>
-        <main className='font-montserrat flex flex-col justify-center items-center gap-10 my-5'>
+        <main className={`font-montserrat flex flex-col justify-center items-center gap-10 py-10`}>
           <h1 className='text-center font-bold text-4xl my-5'>My Stories</h1>
 
           {myAnimationStory}
@@ -102,7 +106,7 @@ const Blog = () => {
             viewport={{once:true,amount:0.8}}
             transition={{duration:1}}
             variants={topAnimate}
-            className='text-base text-center font-md w-72 text-gray-600 px-10 py-4 lg:text-xl lg:w-[1100px]'>
+            className={`text-base text-center font-md w-72 text-gray-600 px-10 py-4 lg:text-xl lg:w-[1100px] ${darkTheme ? 'text-white' : null}`}>
             {statement.thanks}   
           </motion.p>
 

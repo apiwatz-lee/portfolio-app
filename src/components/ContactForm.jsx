@@ -24,7 +24,12 @@ import { AppContext } from '../App';
       setIsSubmit,
       setIsSuccess,
       capVal,
-      setCapVal} = useContext(AppContext)
+      setCapVal,
+      darkTheme,
+      primaryDarkTheme,
+      secondaryDarkTheme,
+      tertiaryDarkTheme
+    } = useContext(AppContext)
  
       const { onClose } = useDisclosure()
 
@@ -87,7 +92,7 @@ import { AppContext } from '../App';
    
   return (
 
-    <main className='font-montserrat flex flex-col justify-center items-center gap-5 2xl:h-[700px]'>
+    <main className={`font-montserrat flex flex-col justify-center items-center gap-5 2xl:h-[700px] py-5`}>
         <h1 className='text-center font-bold text-4xl mt-5'>Contact</h1>
         
         <ReCAPTCHA
@@ -95,7 +100,8 @@ import { AppContext } from '../App';
           onChange={()=>setCapVal(true)}  
           />
 
-        <form className='border w-5/6 flex flex-col justify-center items-center gap-5 rounded-xl p-10 bg-[#fcfbfb83] lg:w-[800px] lg:flex-row lg:flex-wrap' id='contactForm'
+        <form className={`border w-5/6 flex flex-col justify-center items-center gap-5 rounded-xl p-10 bg-[#fcfbfb83] lg:w-[800px] lg:flex-row lg:flex-wrap ${darkTheme ? secondaryDarkTheme : null}`} 
+        id='contactForm'
         ref={form}
         >
            

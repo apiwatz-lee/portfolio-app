@@ -40,7 +40,7 @@ const ContactLoading = ({isLoading}) => {
         >
           <path
             d="M4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4"
-            stroke="#C70039"
+            stroke="##0f172a"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="4"
