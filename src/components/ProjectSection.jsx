@@ -15,7 +15,7 @@ const ProjectSection = () => {
         item.id % 2 === 0 ?
   
         <Link to={item.url} key={item.id} target='_blank' className='w-full flex justify-center items-center'>  
-        <section className={`border flex flex-col-reverse w-full h-auto rounded-lg shadow-lg p-10 gap-10 lg:flex-row lg:w-[1000px] mx-10 ${darkTheme ? `${secondaryDarkTheme} border-none` : null}`}>  
+        <section className={`border flex flex-col-reverse w-full h-auto rounded-lg shadow-lg p-10 gap-10 lg:flex-row lg:w-[1200px] mx-10 ${darkTheme ? `${secondaryDarkTheme} border-none` : null}`}>  
           <div className='flex flex-col gap-5 justify-center items-center lg:justify-evenly lg:text-center'>
             <h1 className='font-bold text-md lg:text-2xl text-center'>{item.name}</h1>
             <p className={`text-sm text-center text-gray-500 ${darkTheme ? 'text-gray-400':null}`}>{item.description}</p>
@@ -33,7 +33,7 @@ const ProjectSection = () => {
       </Link>    
       :
       <Link to={item.url} key={item.id} target='_blank' className='w-full flex justify-center items-center'>  
-      <section className={`border flex flex-col w-full h-auto rounded-lg shadow-lg p-10 gap-10 lg:flex-row lg:w-[1000px] mx-10 ${darkTheme ? `${secondaryDarkTheme} border-none` : null}`}>  
+      <section className={`border flex flex-col w-full h-auto rounded-lg shadow-lg p-10 gap-10 lg:flex-row lg:w-[1200px] mx-10 ${darkTheme ? `${secondaryDarkTheme} border-none` : null}`}>  
         <div className='text-center'>
           <img src={item.img} alt={item.name} className='rounded-xl shadow-lg object-cover hover:scale-105 transition duration-500 cursor-pointer'/>
         </div>
