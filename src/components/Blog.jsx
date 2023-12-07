@@ -21,7 +21,7 @@ const Blog = () => {
       item.id === 1 ?
     
       <section className={`h-auto flex flex-col justify-center items-center gap-10 my-2`} key={item.id}>
-        <h1 className={`text-md lg:text-xl font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
+        <h1 className={`text-md lg:text-xl text-center font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
         <div className={`flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg ${darkTheme ? secondaryDarkTheme : null}`}>
           <img src={item.img} alt="me" className='w-[300px] lg:w-[500px] shadow-2xl rounded-lg'/>
           <p className={`w-[300px] p-5 text-center text-gray-600 text-sm lg:text-lg lg:w-[600px] lg:p-10 ${darkTheme ? 'text-white':null}`}>{item.description}</p>
@@ -38,7 +38,7 @@ const Blog = () => {
                 className={`h-auto flex flex-col justify-center items-center gap-10 my-2`} 
                 key={item.id}>
 
-                <h1 className={`text-md lg:text-xl font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
+                <h1 className={`text-md lg:text-xl text-center font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
 
                 <div className={`flex flex-col-reverse gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg ${darkTheme ? secondaryDarkTheme : null}`}>
                   <motion.p 
@@ -67,7 +67,7 @@ const Blog = () => {
               className={`h-auto flex flex-col justify-center items-center gap-10 my-2`} 
               key={item.id}>
 
-                  <h1 className={`text-md lg:text-xl font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
+                  <h1 className={`text-md text-center lg:text-xl font-bold text-gray-700 ${darkTheme ? 'text-white' : null}`}>{item.title}</h1>
 
                   <div className={`flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center shadow-lg ${darkTheme ? secondaryDarkTheme : null}`}>
                     <motion.img 

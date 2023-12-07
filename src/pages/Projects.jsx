@@ -8,9 +8,9 @@ const Projects = () => {
   const {darkTheme,tertiaryDarkTheme} = useContext(AppContext)
 
   return (
-    <div className={`flex justify-center items-center ${darkTheme ? tertiaryDarkTheme : null}`}>
+    <main className={`flex justify-center items-center ${darkTheme ? tertiaryDarkTheme : null}`}>
         <ProjectSection/>
-    </div>
+    </main>
   )
 }
 

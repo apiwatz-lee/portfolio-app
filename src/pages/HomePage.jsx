@@ -9,10 +9,10 @@ const HomePage = () => {
   const {darkTheme,tertiaryDarkTheme} = useContext(AppContext)
 
   return (
-    <div className={`${darkTheme ? tertiaryDarkTheme : null}`}>
+    <main className={`${darkTheme ? tertiaryDarkTheme : null}`}>
         <Hero/>
         <AboutMeCard/>
-    </div>
+    </main>
   )
 }
 
