@@ -8,7 +8,7 @@ import { AppContext } from '../App'
 
 const Blog = () => {
 
-  const {darkTheme,secondaryDarkTheme,tertiaryDarkTheme} = useContext(AppContext)
+  const {darkTheme,secondaryDarkTheme} = useContext(AppContext)
 
   const topAnimate = {
     offscreen:{opacity:0,translateY:100},

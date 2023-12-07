@@ -9,12 +9,9 @@ import {
     AlertDialogContent,
     AlertDialogOverlay,
   } from "@chakra-ui/react";
-  import { useContext } from 'react';
-  import { AppContext } from '../App';
+
 
 const ContactAlertDialog = ({handleSubmit,isSubmit,handleCancel}) => {
-
-    const {darkTheme,tertiaryDarkTheme} = useContext(AppContext)
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cancelRef = React.useRef()

@@ -13,9 +13,9 @@ const Navbar = ({page}) => {
     const {darkTheme,primaryDarkTheme} = useContext(AppContext)
     const [isOpen,setIsOpen] = useState(false)
 
-    const desktopMenu = links.map((link,index)=>{
+    const desktopMenu = links.map((link)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md duration-300 hover:bg-gray-700 hover:text-white ${link.name === 'CONTACT' && darkTheme ? 'border border-white':link.name === 'CONTACT' ? 'border border-slate-900':null}`}
+            <li key={link.id} className={`flex justify-center rounded-md duration-300 hover:bg-gray-700 hover:text-white ${link.name === 'CONTACT' && darkTheme ? 'border border-white':link.name === 'CONTACT' ? 'border border-slate-900':null}`}
             onClick={()=>{
                 window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
             }}
@@ -24,9 +24,9 @@ const Navbar = ({page}) => {
             </li>)
     })
 
-    const mobileMenu = links.map((link,index)=>{
+    const mobileMenu = links.map((link)=>{
         return ( 
-            <li key={index} className={`flex justify-center rounded-md w-full duration-300 hover:bg-gray-700 hover:text-white`} 
+            <li key={link.id} className={`flex justify-center rounded-md w-full duration-300 hover:bg-gray-700 hover:text-white`} 
             onClick={()=>{
                 setIsOpen(!isOpen)
                 window.scrollTo({top: 0, left: 0, behavior: 'smooth'});

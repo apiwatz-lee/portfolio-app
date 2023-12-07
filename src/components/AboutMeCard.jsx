@@ -7,7 +7,7 @@ import { AppContext } from '../App'
 
 const AboutMeCard = () => {
 
-    const {darkTheme,secondaryDarkTheme,tertiaryDarkTheme} = useContext(AppContext)
+    const {darkTheme,tertiaryDarkTheme} = useContext(AppContext)
     
     const myIntroduction = statement.introduction.map((item)=>{
     return (<p className={`text-center text-[14px] lg:text-xl lg:text-start text-gray-500 ${darkTheme ? tertiaryDarkTheme:null}`} key={item.id}>{item.description}</p>)

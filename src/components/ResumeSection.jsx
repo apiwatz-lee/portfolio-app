@@ -6,8 +6,6 @@ import { AppContext } from '../App'
 
 const ResumeSection = () => {
 
-  const {darkTheme,secondaryDarkTheme,tertiaryDarkTheme} = useContext(AppContext)
-
   return (
     <main className={`font-montserrat flex flex-col justify-center items-center gap-5 lg:h-[500px] 2xl:h-[700px] w-full`}>
           <h1 className='text-center font-bold text-4xl mt-7 w-full'>Resume</h1>

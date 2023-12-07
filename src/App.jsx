@@ -14,9 +14,9 @@ export const AppContext = createContext(null)
 
 function App() {
 
-    const primaryDarkTheme = 'bg-slate-900 text-white'
-    const secondaryDarkTheme = 'bg-slate-800 text-white'
-    const tertiaryDarkTheme = 'bg-slate-700 text-white'
+    const primaryDarkTheme = 'bg-gray-900 text-white'
+    const secondaryDarkTheme = 'bg-gray-800 text-white'
+    const tertiaryDarkTheme = 'bg-gray-700 text-white'
 
     const [contact,setContact] = useState({
       firstname:'',
