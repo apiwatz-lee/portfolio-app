@@ -27,7 +27,7 @@ const Skills = () => {
 
   return (
     <>
-      <section className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[350px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
+      <section className='mt-5 grid grid-cols-5 grid-rows-2 gap-x-10 gap-y-5 w-[250px] lg:w-[500px] lg:gap-x-10 lg:gap-y-10 items-center'>
         {skillLogo}
       </section>
     </>

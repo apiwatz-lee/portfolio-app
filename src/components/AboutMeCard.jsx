@@ -21,7 +21,7 @@ const AboutMeCard = () => {
               <img src={me2} alt="me" className='rounded-full w-72' />
 
               <div className='w-96 lg:w-[500px] text-md flex flex-col justify-center items-center lg:items-start gap-3 lg:gap-7'>
-                <h2 className={`w-[400px] text-xl text-center font-semibold lg:w-[600px] lg:text-start lg:text-3xl text-gray-700 ${darkTheme ? tertiaryDarkTheme : null}`}> {statement.greeting}</h2>
+                <h2 className={`w-[300px] text-xl text-center font-semibold lg:w-[600px] lg:text-start lg:text-3xl text-gray-700 ${darkTheme ? tertiaryDarkTheme : null}`}> {statement.greeting}</h2>
                 {myIntroduction}
               </div>
             </section>

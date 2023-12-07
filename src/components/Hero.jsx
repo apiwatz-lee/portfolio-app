@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <>
       <main className='bg-mountain bg-cover bg-bottom flex flex-col h-[530px] pb-64 justify-center items-center gap-10'>
-          <section className='text-[15px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
+          <section className='text-[12px] w-[250px] lg:w-[650px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
             <span className='text-[20px] text-black lg:text-3xl'>"</span>
               <TypeAnimation
                   sequence={[
