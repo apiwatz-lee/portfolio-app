@@ -30,7 +30,7 @@ function App() {
     const [isSubmit,setIsSubmit] = useState(false)
     const [isSuccess,setIsSuccess] = useState(false) 
     const [capVal,setCapVal] = useState(false)
-    const [darkTheme,setDarkTheme] = useState(true)
+    const [darkTheme,setDarkTheme] = useState(false)
 
 
   return (
