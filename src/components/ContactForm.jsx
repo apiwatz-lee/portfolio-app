@@ -12,6 +12,10 @@ import { AppContext } from '../App';
 
 
   const ContactForm = () => {
+
+    const serviceID = import.meta.env.VITE_SERVICE_ID
+    const templateID = import.meta.env.VITE_TEMPLATE_ID
+    const userID = import.meta.env.VITE_USER_ID
     
     const {
       contact,
@@ -26,9 +30,7 @@ import { AppContext } from '../App';
       capVal,
       setCapVal,
       darkTheme,
-      primaryDarkTheme,
       secondaryDarkTheme,
-      tertiaryDarkTheme
     } = useContext(AppContext)
  
       const { onClose } = useDisclosure()
@@ -61,7 +63,7 @@ import { AppContext } from '../App';
         onClose()     
         setIsLoading(true)
         emailjs
-        .sendForm('service_mwr3m97', 'template_u0c80az', form.current, 'nXyMDY5ObVhIKjeKs')
+        .sendForm(serviceID, templateID, form.current, userID)
         .then((result) => {
             console.log(result.text);
             console.log('message sent')
