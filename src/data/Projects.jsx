@@ -6,7 +6,7 @@ import calculator from "../assets/projects/calculator.png"
 export const projects = [
     {id:1,
     name:'Merry Match App',
-    description:`This is the final project of the TechUp Bootcamp, resembling a Tinder-like application. I was responsible for the Admin Merry Package, where the admin can perform CRUD operations on Merry Package products using React.Js. On the backend, I designed the RestAPI using NodeJs Express, connecting to PostgreSQL. The project was completed over a one-month period following the Agile & Scrum methodology.`,
+    description:`This is the final project of the TechUp Bootcamp that our team was assigned, resembling a Tinder application. I developed features for the Admin Merry Package, allowing the admin to perform CRUD operations on Merry Package products using React.js. On the backend, I designed the Rest API using Node.js Express, connecting it to PostgreSQL. The project was completed over a one-month period, following the Agile & Scrum methodology.`,
     stack:['React.Js','Tailwind CSS','Node.Js','Express','PostgreSQL'],
     url:'https://merry-match-client.onrender.com/',
     img:merryMatch},
