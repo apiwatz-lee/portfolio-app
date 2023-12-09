@@ -53,9 +53,9 @@ const ProjectSection = () => {
     })
       
   return (
-    <main className={`font-montserrat flex flex-col justify-center items-center gap-10 mb-10 w-screen`}>
+    <main className={`font-montserrat flex flex-col justify-center items-center gap-10 mb-10 w-screen py-10`}>
       <h1 className='text-center font-bold text-4xl mt-5'>Projects</h1>
-      {/* <Skills/> */}
+      <Skills/>
       {projectCard}
       <ButtonLink path='/resume' text='Consider my resume'/> 
     </main>

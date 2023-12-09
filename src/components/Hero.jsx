@@ -4,8 +4,7 @@ import {motto} from "../data/HomePage"
 import { AppContext } from '../App';
 import { useEffect } from 'react';
 import { useToast } from '@chakra-ui/react';
-import Skills from './Skills';
-import { Button } from '@chakra-ui/react';
+import CallToAction from './CallToAction';
 
 
 const Hero = () => {
@@ -26,10 +25,11 @@ const Hero = () => {
     setIsSuccess(false)
   },[])
 
+
   return (
     <>
-      <main className='bg-mountain bg-cover bg-bottom flex flex-col h-[530px] pb-64 justify-center items-center gap-10'>
-          <section className='text-[12px] w-[250px] lg:w-[650px] font-extrabold lg:text-3xl font-montserrat text-center mt-5'>
+      <main className='bg-mountain bg-cover bg-bottom flex flex-col h-[530px] pb-64 justify-center items-center gap-12'>
+          <section className='text-[15px] w-[300px] lg:w-[450px] font-extrabold lg:text-xl font-montserrat text-center mt-5'>
             <span className='text-[20px] text-black lg:text-3xl'>"</span>
               <TypeAnimation
                   sequence={[
@@ -45,11 +45,13 @@ const Hero = () => {
                   style={{ fontSize: '1em', display: 'inline-block',color:'#3E3F42' }}
                   repeat={Infinity}
                 />
-            <span className='text-[20px] text-black lg:text-3xl'>"</span> 
-          </section>
-        
-          <Skills/>
+            <span className='text-[20px] text-black lg:text-3xl'>"</span>   
+          </section>        
+
           
+          <CallToAction/>
+          
+          {/* <Skills/> */}
       </main>
     </>
 
