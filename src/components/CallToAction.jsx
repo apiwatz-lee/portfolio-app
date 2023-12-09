@@ -9,16 +9,16 @@ const CallToAction = () => {
               <a
                 href={MyResume} 
                 target='_blank' 
-                className='p-2 rounded-md bg-gray-700 text-white text-sm animate-bounce hover:bg-gray-600 duration-500'>
-                  Resume
+                className='p-2 rounded-md bg-gray-700 text-white text-sm font-bold animate-bounce hover:bg-gray-600 duration-500'>
+                  My resume
               </a>
             
 
          
               <Link 
                 to='/contact' 
-                className='p-2 rounded-md bg-gray-700 text-white text-sm animate-bounce hover:bg-gray-600 duration-500'>
-                  Contact Me
+                className='p-2 rounded-md bg-gray-700 text-white text-sm font-bold animate-bounce hover:bg-gray-600 duration-500'>
+                  Contact me
               </Link>
           
     </section>
