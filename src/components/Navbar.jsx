@@ -31,7 +31,7 @@ const Navbar = ({page}) => {
                 setIsOpen(!isOpen)
                 window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                 }}>
-                <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>3
+                <Link to={link.path} className='text-sm p-2 sm:p-4'>{link.name}</Link>
             </li>)
     })
 
