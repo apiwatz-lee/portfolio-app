@@ -13,8 +13,6 @@ const CallToAction = () => {
                   My resume
               </a>
             
-
-         
               <Link 
                 to='/contact' 
                 className='p-2 rounded-md bg-gray-700 text-white text-sm font-bold animate-bounce hover:bg-gray-600 duration-500'>
