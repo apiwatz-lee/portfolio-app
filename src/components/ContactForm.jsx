@@ -9,6 +9,7 @@ import { useDisclosure } from "@chakra-ui/react";
 import ReCAPTCHA from "react-google-recaptcha"
 import { useContext } from 'react';
 import { AppContext } from '../App';
+import GoogleMaps  from './GoogleMaps'
 
 
   const ContactForm = () => {
@@ -94,7 +95,7 @@ import { AppContext } from '../App';
    
   return (
 
-    <main className={`font-montserrat flex flex-col justify-center items-center gap-5 2xl:h-[700px] py-5`}>
+    <main className={`font-montserrat flex flex-col justify-center items-center gap-5 py-5`}>
         <h1 className='text-center font-bold text-4xl mt-5'>Contact</h1>
         
         <ReCAPTCHA
@@ -159,7 +160,9 @@ import { AppContext } from '../App';
             isLoading={isLoading}
             />       
 
-        </form>                 
+        </form>          
+
+        <GoogleMaps/> 
     </main>
      
   )
