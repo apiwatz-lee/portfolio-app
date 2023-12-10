@@ -49,10 +49,10 @@ const Navbar = ({page}) => {
         </aside>
         
         <nav className={`sticky top-0 p-14 z-10 h-1 flex justify-between items-center font-montserrat bg-mountain bg-top bg-cover outline-none ${page !== 'HomePage' ? `shadow-md `:null} ${darkTheme ? `bg-none ${primaryDarkTheme}`:null}`}>
-            <a href='/' className='flex flex-col justify-center items-center gap-2'>
+            <Link to='/' className='flex flex-col justify-center items-center gap-2'>
                 <h1 className='text-xl lg:text-3xl font-bold'>{profile.name}</h1>
                 <p className={`text-sm text-slate-500 ${darkTheme? 'text-slate-400':null}`}>{profile.role}</p>
-            </a>
+            </Link>
             {/* desktop menu */}
             <ul className='hidden lg:flex mt-5 items-center justify-between w-[600px] '>
                 {desktopMenu}
