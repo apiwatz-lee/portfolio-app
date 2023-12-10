@@ -43,7 +43,7 @@ const Navbar = ({page}) => {
 
     <>
         <aside className={`lg:hidden fixed z-10 duration-300  ${isOpen && darkTheme ? `right-0 ${primaryDarkTheme}`: isOpen ? 'right-0 bg-[#FEFCFF]':'right-[-100%]'} h-full w-[150px] flex flex-col justify-center items-center gap-10`}>
-            <FaTimes className='text-2xl hover:text-slate-500 fixed top-12' onClick={toggleMenu}/>
+            {/* <FaTimes className='text-2xl hover:text-slate-500 fixed top-12' onClick={toggleMenu}/> */}
             {mobileMenu}
             <ToggleTheme/>
         </aside>
@@ -60,8 +60,8 @@ const Navbar = ({page}) => {
             </ul>
             {/* Hamburger Icon */}
             <div className='lg:hidden duration-500'>
-                    {/* {isOpen ? <FaTimes onClick={toggleMenu} className=' text-2xl hover:text-slate-500'/> : <FaBars onClick={toggleMenu} className='text-2xl hover:text-slate-500'/>} */}
-                    <FaBars onClick={toggleMenu} className='text-2xl hover:text-slate-500'/>
+                    {isOpen ? <FaTimes onClick={toggleMenu} className=' text-2xl hover:text-slate-500'/> : <FaBars onClick={toggleMenu} className='text-2xl hover:text-slate-500'/>}
+                    {/* <FaBars onClick={toggleMenu} className='text-2xl hover:text-slate-500'/> */}
             </div>
         </nav>         
     </>
