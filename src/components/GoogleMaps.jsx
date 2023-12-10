@@ -16,7 +16,7 @@ export default function GoogleMaps() {
   return (
     <APIProvider apiKey={googleMapsKey}>
     <div className='h-[30vh] w-[80%] lg:h-[50vh] lg:w-[55%]'>
-      <Map zoom={9} center={position} mapId={mapIdKey}>
+      <Map zoom={5} center={position} mapId={mapIdKey}>
         <AdvancedMarker position={position} onClick={() => setOpen(true)}>
           <Pin
             background={"white"}
