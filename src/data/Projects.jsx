@@ -6,7 +6,7 @@ import calculator from "../assets/projects/calculator.png"
 export const projects = [
     {id:1,
     name:'Shopping App',
-    description:`This is an Online Shopping Application. Currently, you can upload your products, search for items, add products to your cart, and view the cart's report.Crucially, it supports mobile screen interfaces. However, there are several more features that I will be adding soon. Stay tuned for updates!`,
+    description:`This is an Online Shopping Application. Currently, user can register as user (for admin account you can request from me), you can upload your products(only admin), search for items, add products to your cart, and view the cart's report.Crucially, it supports mobile screen interfaces. However, there are several more features that I will be adding soon. Stay tuned for updates!`,
     stack:['React.Js','Tailwind CSS','Node.Js','Express','MongoDB'],
     url:'https://apwxsurface.netlify.app/',
     img:'https://res.cloudinary.com/dpsrbpkav/image/upload/v1703058280/xsurface/lkx1jqx0qwe1o6ysm9sl.png'},
