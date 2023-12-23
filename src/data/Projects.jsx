@@ -5,11 +5,11 @@ import calculator from "../assets/projects/calculator.png"
 
 export const projects = [
     {id:1,
-    name:'Shopping App',
-    description:`This is an Online Shopping Application. Currently, user can register as user (for admin account you can request from me), you can upload your products(only admin), search for items, add products to your cart, and view the cart's report.Crucially, it supports mobile screen interfaces. However, there are several more features that I will be adding soon. Stay tuned for updates!`,
+    name:'Online Shopping App',
+    description:`This is an online shopping application where users can register as customers. If you require an admin account, please feel free to request one. The application allows users to search for products, add them to their carts, and view detailed reports of their carts. Notably, administrators have the capability to Create, Read, Update, and Delete products. It is designed to provide a seamless experience on mobile interfaces. Excitingly, more features will be added soon, so stay tuned for updates!`,
     stack:['React.Js','Tailwind CSS','Node.Js','Express','MongoDB'],
     url:'https://apwxsurface.netlify.app/',
-    img:'https://res.cloudinary.com/dpsrbpkav/image/upload/v1703058280/xsurface/lkx1jqx0qwe1o6ysm9sl.png'},
+    img:'https://res.cloudinary.com/dpsrbpkav/image/upload/v1702820870/xsurface/Screenshot_2566-12-17_at_20.46.33_itd8hj.png'},
     {id:2,
     name:'Merry Match App',
     description:`This is the final project of the TechUp Bootcamp that our team was assigned, resembling a Tinder application. I developed features for the Admin Merry Package, allowing the admin to perform CRUD operations on Merry Package products using React.js. On the backend, I designed the Rest API using Node.js Express, connecting it to PostgreSQL. The project was completed over a one-month period, following the Agile & Scrum methodology.`,
