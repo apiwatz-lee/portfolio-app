@@ -6,7 +6,7 @@ import calculator from '../assets/projects/calculator.png';
 export const projects = [
   {
     id: 1,
-    name: 'Online Shopping App',
+    name: 'E-commerce App',
     description: `This is an online shopping application where users can register as customers. The application allows users to search for products, add them to their carts, and view detailed reports of their carts. Notably, administrators have the capability to Create, Read, Update, and Delete products. It is designed to provide a seamless experience on mobile interfaces. Excitingly, more features will be added soon, so stay tuned for updates! Admin account ID: Admin Ps: 999`,
     stack: ['React.Js', 'Tailwind CSS', 'Node.Js', 'Express', 'MongoDB'],
     url: 'https://apwxsurface.netlify.app/',
@@ -32,7 +32,7 @@ export const projects = [
 
   {
     id: 4,
-    name: 'E-Commerce App',
+    name: 'Shopping Cart App',
     description: `This is a shopping cart system project that was assigned to me by TechUp Bootcamp to practice and learn programming for a shopping cart with CRUD operations and an automatic price calculation system on the frontend using React.js.`,
     stack: ['React.Js', 'Tailwind CSS'],
     url: 'https://apwcart.netlify.app/',
