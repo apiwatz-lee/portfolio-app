@@ -106,8 +106,8 @@ export const story = [
   },
   {
     id: 11,
-    title: 'Jan2024 - Starting new career path',
-    description: `After completing the bootcamp, I dedicated two months to honing my coding skills. Subsequently, 
+    title: 'Jan2024 - Starting a new career path',
+    description: `After completing the bootcamp, I dedicated two months to honing my coding skills. After that, 
     I began applying for jobs, and I am delighted to inform everyone that I have started a new job as a full-stack developer 
     at xSurface Company Limited. It marks a promising beginning for me, 
     and I am committed to continuous self-improvement while contributing value to the organization every day
