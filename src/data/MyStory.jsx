@@ -9,6 +9,7 @@ import primary from '../assets/story/primarySchool.jpg';
 import achievement from '../assets/story/achievement.jpg';
 import techupCer from '../assets/story/techupCer.jpg';
 import firstJobAsDev from '../assets/story/firstJobAsDev.jpg';
+import probationPeriod from '../assets/story/probationPeriod.png';
 
 export const story = [
   {
@@ -113,5 +114,14 @@ export const story = [
     and I am committed to continuous self-improvement while contributing value to the organization every day
     `,
     img: firstJobAsDev,
+  },
+  {
+    id: 12,
+    title: 'May2024 - Successfull probation period ',
+    description: `The day has finally arrived. The past four months of my probation period have been incredibly challenging 
+    as I strived to prove myself in the field of software development, a new career path for me. I've thoroughly enjoyed learning something new every day. 
+    This has been a very promising start, and I am very proud of what I have accomplished. Yes, I can do it.
+    `,
+    img: probationPeriod,
   },
 ];
