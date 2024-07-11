@@ -1,20 +1,20 @@
-import child from '../assets/story/child1.jpg';
-import graduated from '../assets/story/graduated.jpg';
-import firstJob from '../assets/story/firstJob.jpg';
-import guider from '../assets/story/guider.jpg';
-import learning from '../assets/story/learning.jpg';
-import firstResign from '../assets/story/experience.jpg';
-import bootcamp from '../assets/story/bootcamp.jpg';
-import primary from '../assets/story/primarySchool.jpg';
-import achievement from '../assets/story/achievement.jpg';
-import techupCer from '../assets/story/techupCer.jpg';
-import firstJobAsDev from '../assets/story/firstJobAsDev.jpg';
-import probationPeriod from '../assets/story/probationPeriod.png';
+import child from "../assets/story/child1.jpg";
+import graduated from "../assets/story/graduated.jpg";
+import firstJob from "../assets/story/firstJob.jpg";
+import guider from "../assets/story/guider.jpg";
+import learning from "../assets/story/learning.jpg";
+import firstResign from "../assets/story/experience.jpg";
+import bootcamp from "../assets/story/bootcamp.jpg";
+import primary from "../assets/story/primarySchool.jpg";
+import achievement from "../assets/story/achievement.jpg";
+import techupCer from "../assets/story/techupCer.jpg";
+import firstJobAsDev from "../assets/story/firstJobAsDev.jpg";
+import probationPeriod from "../assets/story/probationPeriod.jpg";
 
 export const story = [
   {
     id: 1,
-    title: '1995 - When I was a Child',
+    title: "1995 - When I was a Child",
     description: `I am Thai of Chinese descent, born and raised in the warm family atmosphere of Hat Yai, Thailand. 
         My father has a strong interest in computers, so I had the opportunity to play with computers since I was a child. 
         Our house even has a dedicated computer room.
@@ -26,7 +26,7 @@ export const story = [
   },
   {
     id: 2,
-    title: '2000 - Primary and Secondary School',
+    title: "2000 - Primary and Secondary School",
     description: `During primary school, I was sent to participate in a computer competition and even secured the second prize. 
         Unfortunately, we didn't have a mobile phone with a camera at that time, 
         so I'll share this text instead of a photo (Can you guess who I am? 😂).`,
@@ -43,7 +43,7 @@ export const story = [
   },
   {
     id: 4,
-    title: '2019 - My First Job',
+    title: "2019 - My First Job",
     description: `After completing my studies, my parents wanted me to gain external experience before returning to manage the family business. 
         Thus, I worked at Southland Rubber Co., Ltd as a Procurement Officer. 
         My responsibilities included visiting suppliers to build good relationships and analyzing markets to adjust the company's raw material procurement strategy. 
@@ -52,7 +52,7 @@ export const story = [
   },
   {
     id: 5,
-    title: '2021 to 2023 - Achievement',
+    title: "2021 to 2023 - Achievement",
     description: `Our team were assigned the EcoVadis project, 
         where EcoVadis acted as a third party guaranteeing the sustainability of our operations. 
         I had the opportunity to oversee the Economic Aspect, planning from the initiation of in-house projects, ensuring communication within the company, and monitoring operations throughout the year. 
@@ -61,7 +61,7 @@ export const story = [
   },
   {
     id: 6,
-    title: '2023 - Turning Point',
+    title: "2023 - Turning Point",
     description: `While working, I was fortunate to meet and be in the same group as an older colleague who is a programmer at the company. 
         He opened up the world of coding to me, and I believe this is a turning point in my life. 
         After getting to know it, I feel like this is exactly what I've been searching for all along.
@@ -70,7 +70,7 @@ export const story = [
   },
   {
     id: 7,
-    title: 'Apr2023 - Learning Process',
+    title: "Apr2023 - Learning Process",
     description: `I enjoy learning and honing my skills. 
         I delight in dedicating time to creatively craft the projects I am passionate about. 
         When the work takes shape, I feel that it truly adds vibrant colors to my life.`,
@@ -78,7 +78,7 @@ export const story = [
   },
   {
     id: 8,
-    title: 'Jun2023 - My First Resignation',
+    title: "Jun2023 - My First Resignation",
     description: `Once confident that I genuinely love it, 
         I made the decision to resign from my job on June 6, 2023. 
         It was the last day at the company, marking the day I had to step out of my comfort zone to pursue my dreams and change my career path.`,
@@ -86,7 +86,7 @@ export const story = [
   },
   {
     id: 9,
-    title: 'Jun2023 - Joined Coding Bootcamp',
+    title: "Jun2023 - Joined Coding Bootcamp",
     description: `I've decided to enroll in the Full-Stack Developer Bootcamp at TechUp Institute to change my career path. 
         I've flown from Hat Yai to Bangkok, solely focusing on my studies. 
         The course covered HTML, CSS, JAVASCRIPT, REACT.JS, NODE.JS, EXPRESS, POSTGRESQL, MONGODB, 
@@ -95,7 +95,7 @@ export const story = [
   },
   {
     id: 10,
-    title: 'Oct2023 - TechUp Graduation',
+    title: "Oct2023 - TechUp Graduation",
     description: `I successfully completed my studies at TechUp Coding Bootcamp. 
         However, the learning journey doesn't end. 
         I'm considering continuing my education with TypeScript and working on a website project for my older brother related to real estate. 
@@ -107,7 +107,7 @@ export const story = [
   },
   {
     id: 11,
-    title: 'Jan2024 - Starting a new career path',
+    title: "Jan2024 - Starting a new career path",
     description: `After completing the bootcamp, I dedicated two months to honing my coding skills. After that, 
     I began applying for jobs, and I am delighted to inform everyone that I have started a new job as a full-stack developer 
     at xSurface Company Limited. It marks a promising beginning for me, 
@@ -117,7 +117,7 @@ export const story = [
   },
   {
     id: 12,
-    title: 'May2024 - Successfull probation period ',
+    title: "May2024 - Successfull probation period ",
     description: `The day has finally arrived. The past four months of my probation period have been incredibly challenging 
     as I strived to prove myself in the field of software development, a new career path for me. I've thoroughly enjoyed learning something new every day. 
     This has been a very promising start, and I am very proud of what I have accomplished. Yes, I can do it.
