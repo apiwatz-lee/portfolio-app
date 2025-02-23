@@ -1,12 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import MyResume from '../assets/files/AphiwatLee2023.pdf';
+import CvAphiwat from '../assets/files/CvAphiwat.pdf';
 
 const CallToAction = () => {
   return (
     <section className='flex justify-center items-center gap-5'>
       <a
-        href={MyResume}
+        href={CvAphiwat}
         target='_blank'
         className='p-2 rounded-md bg-gray-700 text-white text-sm font-bold hover:bg-gray-600 duration-500'
       >

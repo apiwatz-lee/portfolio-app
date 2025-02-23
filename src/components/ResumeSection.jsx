@@ -1,6 +1,5 @@
-import React from 'react';
-import MyResume from '../assets/files/AphiwatLee2023.pdf';
 import me3 from '../assets/me/me3.jpeg';
+import CvAphiwat from '../assets/files/CvAphiwat.pdf';
 
 const ResumeSection = () => {
   return (
@@ -15,7 +14,7 @@ const ResumeSection = () => {
           <p className='text-center'>
             Thank you for your interest in me. Here is my resume.
           </p>
-          <a href={MyResume} target='_blank'>
+          <a href={CvAphiwat} target='_blank'>
             <button className='border p-3 rounded-full duration-300 hover:bg-gray-900 hover:text-white animate-bounce'>
               Download
             </button>
